@@ -43,22 +43,12 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-6xl mx-auto bg-white shadow-md rounded-2xl p-6">
-      <div className="mb-6">
-            <img
-                src="/isoloops-logo.png"
-                alt="isoloops logo"
-                className="h-8 w-auto object-contain"
-            />
-        </div>
+      <div className="flex items-center gap-3 mb-2">
+        <img src="/isoloops-logo-transparent.png" alt="isoloops logo" className="h-10 w-10" />
+        <h1 className="text-3xl font-extrabold text-gray-800">isoloops</h1>
+      </div>
         <p className="text-gray-600 mb-6 italic">Find the cleanest samples in the wild.</p>
-        {/* Sticky Navbar */}
-        <div className="sticky top-0 z-50 bg-white shadow-sm px-6 py-2 flex items-center">
-            <img
-                src="/logo-icon.png"
-                alt="isoloops logo icon"
-                className="h-6 w-auto object-contain"
-            />
-        </div>
+
         {/* Surprise Me Button */}
         {!surpriseSong ? (
           <button
