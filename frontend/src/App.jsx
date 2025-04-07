@@ -45,7 +45,6 @@ const App = () => {
       <div className="max-w-6xl mx-auto bg-white shadow-md rounded-2xl p-6">
       <div className="flex items-center gap-3 mb-2">
         <img src="/isoloops-logo-transparent.png" alt="isoloops logo" className="h-10 w-10" />
-        <h1 className="text-3xl font-extrabold text-gray-800">isoloops</h1>
       </div>
         <p className="text-gray-600 mb-6 italic">Find the cleanest samples in the wild.</p>
 
