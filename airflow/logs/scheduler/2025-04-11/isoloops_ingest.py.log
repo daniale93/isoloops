@@ -2112,3 +2112,157 @@
 [2025-04-11T02:34:33.086+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:34:33.086+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-04-11T02:34:33.094+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:34:33.094+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
 [2025-04-11T02:34:33.103+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.246 seconds
+[2025-04-11T02:35:03.752+0000] {processor.py:161} INFO - Started process (PID=52007) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:35:03.755+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:35:03.757+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:35:03.757+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:35:04.010+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:35:04.027+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:35:04.027+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:35:04.036+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:35:04.036+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:35:04.055+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.308 seconds
+[2025-04-11T02:35:34.987+0000] {processor.py:161} INFO - Started process (PID=52064) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:35:34.990+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:35:34.992+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:35:34.991+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:35:35.189+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:35:35.205+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:35:35.205+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:35:35.215+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:35:35.215+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:35:35.223+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.239 seconds
+[2025-04-11T02:36:05.532+0000] {processor.py:161} INFO - Started process (PID=52136) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:36:05.538+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:36:05.541+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:36:05.540+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:36:05.921+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:36:05.941+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:36:05.941+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:36:05.955+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:36:05.955+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:36:05.996+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.472 seconds
+[2025-04-11T02:36:36.122+0000] {processor.py:161} INFO - Started process (PID=52208) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:36:36.125+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:36:36.127+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:36:36.127+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:36:36.322+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:36:36.336+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:36:36.336+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:36:36.342+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:36:36.341+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:36:36.354+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.236 seconds
+[2025-04-11T02:37:06.992+0000] {processor.py:161} INFO - Started process (PID=52280) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:37:06.996+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:37:06.997+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:37:06.997+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:37:07.201+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:37:07.216+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:37:07.216+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:37:07.225+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:37:07.225+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:37:07.235+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.246 seconds
+[2025-04-11T02:37:38.155+0000] {processor.py:161} INFO - Started process (PID=52337) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:37:38.168+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:37:38.174+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:37:38.174+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:37:38.494+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:37:38.522+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:37:38.521+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:37:38.529+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:37:38.529+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:37:38.542+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.415 seconds
+[2025-04-11T02:38:09.280+0000] {processor.py:161} INFO - Started process (PID=52409) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:38:09.286+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:38:09.290+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:38:09.289+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:38:09.517+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:38:09.533+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:38:09.532+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:38:09.540+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:38:09.540+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:38:09.559+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.284 seconds
+[2025-04-11T02:38:39.940+0000] {processor.py:161} INFO - Started process (PID=52481) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:38:39.943+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:38:39.946+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:38:39.946+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:38:40.186+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:38:40.198+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:38:40.198+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:38:40.207+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:38:40.207+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:38:40.216+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.283 seconds
+[2025-04-11T02:39:10.468+0000] {processor.py:161} INFO - Started process (PID=52556) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:39:10.469+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:39:10.471+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:39:10.471+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:39:10.615+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:39:10.626+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:39:10.626+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:39:10.633+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:39:10.633+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:39:10.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.176 seconds
+[2025-04-11T02:39:40.815+0000] {processor.py:161} INFO - Started process (PID=52613) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:39:40.818+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:39:40.821+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:39:40.820+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:39:41.031+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:39:41.049+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:39:41.049+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:39:41.055+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:39:41.055+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:39:41.068+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.259 seconds
+[2025-04-11T02:40:11.558+0000] {processor.py:161} INFO - Started process (PID=52682) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:40:11.566+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:40:11.570+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:40:11.569+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:40:11.923+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:40:11.939+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:40:11.939+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:40:11.950+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:40:11.949+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:40:11.964+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.418 seconds
+[2025-04-11T02:40:42.526+0000] {processor.py:161} INFO - Started process (PID=52754) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:40:42.531+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:40:42.533+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:40:42.533+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:40:42.742+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:40:42.758+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:40:42.757+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:40:42.764+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:40:42.764+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:40:42.773+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.255 seconds
+[2025-04-11T02:41:13.083+0000] {processor.py:161} INFO - Started process (PID=52811) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:41:13.088+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:41:13.095+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:41:13.095+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:41:13.331+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:41:13.348+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:41:13.348+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:41:13.355+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:41:13.355+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:41:13.370+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.295 seconds
+[2025-04-11T02:41:43.432+0000] {processor.py:161} INFO - Started process (PID=52883) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:41:43.436+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:41:43.438+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:41:43.438+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:41:43.686+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:41:43.701+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:41:43.701+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:41:43.709+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:41:43.709+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:41:43.720+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.294 seconds
+[2025-04-11T02:42:14.165+0000] {processor.py:161} INFO - Started process (PID=52955) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:42:14.174+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:42:14.190+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:42:14.189+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:42:14.486+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:42:14.512+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:42:14.511+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:42:14.519+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:42:14.518+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:42:14.534+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.380 seconds
+[2025-04-11T02:42:44.985+0000] {processor.py:161} INFO - Started process (PID=53027) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:42:44.990+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:42:44.993+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:42:44.992+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:42:45.152+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:42:45.173+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:42:45.172+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:42:45.181+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:42:45.181+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:42:45.192+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.211 seconds
+[2025-04-11T02:43:15.297+0000] {processor.py:161} INFO - Started process (PID=53084) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:43:15.310+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:43:15.314+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:43:15.314+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:43:15.625+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:43:15.638+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:43:15.637+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:43:15.645+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:43:15.645+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:43:15.656+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.374 seconds
+[2025-04-11T02:43:46.421+0000] {processor.py:161} INFO - Started process (PID=53156) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:43:46.426+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:43:46.430+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:43:46.430+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:43:46.680+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:43:46.698+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:43:46.698+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:43:46.707+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:43:46.707+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:43:46.718+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.306 seconds
+[2025-04-11T02:44:17.402+0000] {processor.py:161} INFO - Started process (PID=53228) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:44:17.404+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:44:17.406+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:44:17.406+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:44:17.666+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:44:17.683+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:44:17.683+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:44:17.692+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:44:17.692+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:44:17.707+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.311 seconds
+[2025-04-11T02:44:48.128+0000] {processor.py:161} INFO - Started process (PID=53300) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:44:48.132+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:44:48.136+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:44:48.135+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:44:48.340+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:44:48.364+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:44:48.363+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:44:48.382+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:44:48.382+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:44:48.394+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.273 seconds
+[2025-04-11T02:45:18.749+0000] {processor.py:161} INFO - Started process (PID=53357) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:45:18.754+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:45:18.779+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:45:18.778+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:45:19.133+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:45:19.151+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:45:19.151+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:45:19.160+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:45:19.160+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:45:19.173+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.459 seconds
+[2025-04-11T02:45:49.434+0000] {processor.py:161} INFO - Started process (PID=53429) to work on /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:45:49.440+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/isoloops_ingest.py for tasks to queue
+[2025-04-11T02:45:49.448+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:45:49.447+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:45:49.779+0000] {processor.py:840} INFO - DAG(s) 'isoloops_ingest' retrieved from /opt/airflow/dags/isoloops_ingest.py
+[2025-04-11T02:45:49.800+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:45:49.800+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-11T02:45:49.809+0000] {logging_mixin.py:188} INFO - [2025-04-11T02:45:49.809+0000] {dag.py:3823} INFO - Setting next_dagrun for isoloops_ingest to None, run_after=None
+[2025-04-11T02:45:49.818+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/isoloops_ingest.py took 0.395 seconds
