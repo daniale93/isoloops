@@ -11,7 +11,7 @@ const App = () => {
   // Fetch data from the backend API (which queries Snowflake)
   useEffect(() => {
     axios
-      .get('/api/query.py')   // Correct API endpoint
+      .get('https://isoloops-api.vercel.app/api/query.py')// Correct API endpoint
       .then((response) => {
         console.log('Fetched data:', response.data);  // Check if data is coming through
         const rawData = response.data.samples || [];
