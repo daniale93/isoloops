@@ -16,3 +16,4 @@ dist/
 
 # Mac system files
 .DS_Store
+.vercel
