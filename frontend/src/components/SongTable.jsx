@@ -42,6 +42,7 @@ const SongTable = ({ songs }) => {
                       width="200"
                       height="113"
                       src={`https://www.youtube.com/embed/${videoId}?start=${start}`}
+                      title={`Sample video for ${song.TITLE || 'track'}`}   
                       frameBorder="0"
                       allowFullScreen
                     ></iframe>
