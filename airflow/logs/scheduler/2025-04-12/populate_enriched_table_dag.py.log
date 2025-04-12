@@ -450,3 +450,66 @@
 [2025-04-12T23:25:33.309+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:25:33.309+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-04-12T23:25:33.331+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:25:33.330+0000] {dag.py:3823} INFO - Setting next_dagrun for populate_sampled_songs_enriched to None, run_after=None
 [2025-04-12T23:25:33.351+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/populate_enriched_table_dag.py took 0.712 seconds
+[2025-04-12T23:38:38.134+0000] {processor.py:161} INFO - Started process (PID=58151) to work on /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:38:38.137+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/populate_enriched_table_dag.py for tasks to queue
+[2025-04-12T23:38:38.139+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:38:38.139+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:38:38.944+0000] {processor.py:840} INFO - DAG(s) 'populate_sampled_songs_enriched' retrieved from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:38:38.959+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:38:38.959+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:38:38.975+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:38:38.975+0000] {dag.py:3823} INFO - Setting next_dagrun for populate_sampled_songs_enriched to None, run_after=None
+[2025-04-12T23:38:39.199+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/populate_enriched_table_dag.py took 1.071 seconds
+[2025-04-12T23:39:09.843+0000] {processor.py:161} INFO - Started process (PID=58230) to work on /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:39:09.873+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/populate_enriched_table_dag.py for tasks to queue
+[2025-04-12T23:39:09.876+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:09.876+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:39:10.383+0000] {processor.py:840} INFO - DAG(s) 'populate_sampled_songs_enriched' retrieved from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:39:10.394+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:10.393+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:39:10.402+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:10.402+0000] {dag.py:3823} INFO - Setting next_dagrun for populate_sampled_songs_enriched to None, run_after=None
+[2025-04-12T23:39:10.411+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/populate_enriched_table_dag.py took 0.570 seconds
+[2025-04-12T23:39:41.251+0000] {processor.py:161} INFO - Started process (PID=58308) to work on /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:39:41.257+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/populate_enriched_table_dag.py for tasks to queue
+[2025-04-12T23:39:41.266+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:41.266+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:39:41.697+0000] {processor.py:840} INFO - DAG(s) 'populate_sampled_songs_enriched' retrieved from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:39:41.709+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:41.709+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:39:41.716+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:41.716+0000] {dag.py:3823} INFO - Setting next_dagrun for populate_sampled_songs_enriched to None, run_after=None
+[2025-04-12T23:39:41.729+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/populate_enriched_table_dag.py took 0.480 seconds
+[2025-04-12T23:40:12.151+0000] {processor.py:161} INFO - Started process (PID=58367) to work on /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:40:12.154+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/populate_enriched_table_dag.py for tasks to queue
+[2025-04-12T23:40:12.158+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:12.158+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:40:13.000+0000] {processor.py:840} INFO - DAG(s) 'populate_sampled_songs_enriched' retrieved from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:40:13.021+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:13.021+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:40:13.036+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:13.036+0000] {dag.py:3823} INFO - Setting next_dagrun for populate_sampled_songs_enriched to None, run_after=None
+[2025-04-12T23:40:13.052+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/populate_enriched_table_dag.py took 0.908 seconds
+[2025-04-12T23:40:43.405+0000] {processor.py:161} INFO - Started process (PID=58449) to work on /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:40:43.407+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/populate_enriched_table_dag.py for tasks to queue
+[2025-04-12T23:40:43.409+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:43.409+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:40:44.082+0000] {processor.py:840} INFO - DAG(s) 'populate_sampled_songs_enriched' retrieved from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:40:44.102+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:44.101+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:40:44.109+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:44.109+0000] {dag.py:3823} INFO - Setting next_dagrun for populate_sampled_songs_enriched to None, run_after=None
+[2025-04-12T23:40:44.118+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/populate_enriched_table_dag.py took 0.719 seconds
+[2025-04-12T23:41:15.009+0000] {processor.py:161} INFO - Started process (PID=58525) to work on /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:41:15.012+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/populate_enriched_table_dag.py for tasks to queue
+[2025-04-12T23:41:15.016+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:41:15.016+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:41:15.642+0000] {processor.py:840} INFO - DAG(s) 'populate_sampled_songs_enriched' retrieved from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:41:15.658+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:41:15.658+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:41:15.664+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:41:15.664+0000] {dag.py:3823} INFO - Setting next_dagrun for populate_sampled_songs_enriched to None, run_after=None
+[2025-04-12T23:41:15.671+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/populate_enriched_table_dag.py took 0.670 seconds
+[2025-04-12T23:41:46.630+0000] {processor.py:161} INFO - Started process (PID=58601) to work on /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:41:46.632+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/populate_enriched_table_dag.py for tasks to queue
+[2025-04-12T23:41:46.638+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:41:46.637+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:41:47.320+0000] {processor.py:840} INFO - DAG(s) 'populate_sampled_songs_enriched' retrieved from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:41:47.340+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:41:47.340+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:41:47.347+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:41:47.347+0000] {dag.py:3823} INFO - Setting next_dagrun for populate_sampled_songs_enriched to None, run_after=None
+[2025-04-12T23:41:47.355+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/populate_enriched_table_dag.py took 0.739 seconds
+[2025-04-12T23:42:17.641+0000] {processor.py:161} INFO - Started process (PID=58662) to work on /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:42:17.647+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/populate_enriched_table_dag.py for tasks to queue
+[2025-04-12T23:42:17.656+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:17.655+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:42:18.490+0000] {processor.py:840} INFO - DAG(s) 'populate_sampled_songs_enriched' retrieved from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:42:18.511+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:18.511+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:42:18.525+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:18.525+0000] {dag.py:3823} INFO - Setting next_dagrun for populate_sampled_songs_enriched to None, run_after=None
+[2025-04-12T23:42:18.538+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/populate_enriched_table_dag.py took 0.911 seconds
+[2025-04-12T23:42:49.128+0000] {processor.py:161} INFO - Started process (PID=58738) to work on /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:42:49.134+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/populate_enriched_table_dag.py for tasks to queue
+[2025-04-12T23:42:49.158+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:49.155+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:42:50.246+0000] {processor.py:840} INFO - DAG(s) 'populate_sampled_songs_enriched' retrieved from /opt/airflow/dags/populate_enriched_table_dag.py
+[2025-04-12T23:42:50.259+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:50.259+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:42:50.265+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:50.265+0000] {dag.py:3823} INFO - Setting next_dagrun for populate_sampled_songs_enriched to None, run_after=None
+[2025-04-12T23:42:50.275+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/populate_enriched_table_dag.py took 1.176 seconds

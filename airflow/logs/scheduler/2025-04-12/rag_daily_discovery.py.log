@@ -14014,3 +14014,59 @@ ModuleNotFoundError: No module named 'timezone'
 [2025-04-12T23:25:07.091+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:25:07.091+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-04-12T23:25:07.179+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:25:07.179+0000] {dag.py:3823} INFO - Setting next_dagrun for rag_daily_discovery to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
 [2025-04-12T23:25:07.187+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/rag_daily_discovery.py took 1.208 seconds
+[2025-04-12T23:38:50.988+0000] {processor.py:161} INFO - Started process (PID=58187) to work on /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:38:50.994+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/rag_daily_discovery.py for tasks to queue
+[2025-04-12T23:38:50.998+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:38:50.998+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:38:51.791+0000] {processor.py:840} INFO - DAG(s) 'rag_daily_discovery' retrieved from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:38:51.804+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:38:51.803+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:38:51.814+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:38:51.814+0000] {dag.py:3823} INFO - Setting next_dagrun for rag_daily_discovery to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-12T23:38:51.821+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/rag_daily_discovery.py took 0.855 seconds
+[2025-04-12T23:39:22.883+0000] {processor.py:161} INFO - Started process (PID=58248) to work on /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:39:22.886+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/rag_daily_discovery.py for tasks to queue
+[2025-04-12T23:39:22.904+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:22.904+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:39:24.435+0000] {processor.py:840} INFO - DAG(s) 'rag_daily_discovery' retrieved from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:39:24.460+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:24.459+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:39:24.473+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:24.473+0000] {dag.py:3823} INFO - Setting next_dagrun for rag_daily_discovery to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-12T23:39:24.483+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/rag_daily_discovery.py took 1.634 seconds
+[2025-04-12T23:39:54.570+0000] {processor.py:161} INFO - Started process (PID=58331) to work on /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:39:54.572+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/rag_daily_discovery.py for tasks to queue
+[2025-04-12T23:39:54.573+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:54.573+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:39:55.558+0000] {processor.py:840} INFO - DAG(s) 'rag_daily_discovery' retrieved from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:39:55.571+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:55.571+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:39:55.586+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:39:55.586+0000] {dag.py:3823} INFO - Setting next_dagrun for rag_daily_discovery to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-12T23:39:55.599+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/rag_daily_discovery.py took 1.034 seconds
+[2025-04-12T23:40:26.096+0000] {processor.py:161} INFO - Started process (PID=58416) to work on /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:40:26.097+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/rag_daily_discovery.py for tasks to queue
+[2025-04-12T23:40:26.099+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:26.099+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:40:26.915+0000] {processor.py:840} INFO - DAG(s) 'rag_daily_discovery' retrieved from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:40:26.926+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:26.925+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:40:26.940+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:26.940+0000] {dag.py:3823} INFO - Setting next_dagrun for rag_daily_discovery to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-12T23:40:26.950+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/rag_daily_discovery.py took 0.856 seconds
+[2025-04-12T23:40:57.143+0000] {processor.py:161} INFO - Started process (PID=58497) to work on /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:40:57.144+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/rag_daily_discovery.py for tasks to queue
+[2025-04-12T23:40:57.145+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:57.145+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:40:57.845+0000] {processor.py:840} INFO - DAG(s) 'rag_daily_discovery' retrieved from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:40:57.854+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:57.854+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:40:57.865+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:40:57.865+0000] {dag.py:3823} INFO - Setting next_dagrun for rag_daily_discovery to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-12T23:40:57.873+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/rag_daily_discovery.py took 0.732 seconds
+[2025-04-12T23:41:28.218+0000] {processor.py:161} INFO - Started process (PID=58558) to work on /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:41:28.220+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/rag_daily_discovery.py for tasks to queue
+[2025-04-12T23:41:28.222+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:41:28.222+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:41:29.192+0000] {processor.py:840} INFO - DAG(s) 'rag_daily_discovery' retrieved from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:41:29.203+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:41:29.203+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:41:29.213+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:41:29.213+0000] {dag.py:3823} INFO - Setting next_dagrun for rag_daily_discovery to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-12T23:41:29.220+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/rag_daily_discovery.py took 1.006 seconds
+[2025-04-12T23:41:59.644+0000] {processor.py:161} INFO - Started process (PID=58638) to work on /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:41:59.646+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/rag_daily_discovery.py for tasks to queue
+[2025-04-12T23:41:59.647+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:41:59.646+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:42:00.486+0000] {processor.py:840} INFO - DAG(s) 'rag_daily_discovery' retrieved from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:42:00.501+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:00.500+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:42:00.514+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:00.514+0000] {dag.py:3823} INFO - Setting next_dagrun for rag_daily_discovery to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-12T23:42:00.523+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/rag_daily_discovery.py took 0.892 seconds
+[2025-04-12T23:42:31.108+0000] {processor.py:161} INFO - Started process (PID=58714) to work on /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:42:31.111+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/rag_daily_discovery.py for tasks to queue
+[2025-04-12T23:42:31.112+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:31.112+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:42:31.835+0000] {processor.py:840} INFO - DAG(s) 'rag_daily_discovery' retrieved from /opt/airflow/dags/rag_daily_discovery.py
+[2025-04-12T23:42:31.846+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:31.846+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-12T23:42:31.856+0000] {logging_mixin.py:188} INFO - [2025-04-12T23:42:31.856+0000] {dag.py:3823} INFO - Setting next_dagrun for rag_daily_discovery to 2025-04-12 00:00:00+00:00, run_after=2025-04-13 00:00:00+00:00
+[2025-04-12T23:42:31.862+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/rag_daily_discovery.py took 0.763 seconds
