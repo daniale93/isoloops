@@ -5,6 +5,8 @@ __pycache__/
 # Secrets
 .env
 *.env
+airflow/.env
+airflow/dags/.env
 
 # Parquet or data files
 *.parquet
