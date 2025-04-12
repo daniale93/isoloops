@@ -1,0 +1,28 @@
+[2025-04-12T16:21:44.625+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-12T16:21:42.096371+00:00 [queued]>
+[2025-04-12T16:21:44.633+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-12T16:21:42.096371+00:00 [queued]>
+[2025-04-12T16:21:44.634+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-12T16:21:44.644+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_discovery_flow> on 2025-04-12 16:21:42.096371+00:00
+[2025-04-12T16:21:44.651+0000] {standard_task_runner.py:60} INFO - Started process 211 to run task
+[2025-04-12T16:21:44.656+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'rag_daily_discovery', 'run_discovery_flow', 'manual__2025-04-12T16:21:42.096371+00:00', '--job-id', '185', '--raw', '--subdir', 'DAGS_FOLDER/rag_daily_discovery.py', '--cfg-path', '/tmp/tmp_qaf6_3a']
+[2025-04-12T16:21:44.658+0000] {standard_task_runner.py:88} INFO - Job 185: Subtask run_discovery_flow
+[2025-04-12T16:21:44.725+0000] {task_command.py:423} INFO - Running <TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-12T16:21:42.096371+00:00 [running]> on host d8131b4dd0ad
+[2025-04-12T16:21:44.797+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='rag_daily_discovery' AIRFLOW_CTX_TASK_ID='run_discovery_flow' AIRFLOW_CTX_EXECUTION_DATE='2025-04-12T16:21:42.096371+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-12T16:21:42.096371+00:00'
+[2025-04-12T16:21:50.543+0000] {logging_mixin.py:188} INFO - 🔍 Raw queries from LLM: ['Sure! Here’s a list of 40 songs or artists known for their strong isolated percussion or vocal sections ideal for sampling across Afro, Latin, funk, or world genres:', 'Mongo Santamaria', 'Fela Kuti', 'Tito Puente', 'Wayne Shorter', 'Os Mutantes', 'Gilberto Gil', 'Caetano Veloso', 'Antibalas', 'Seu Jorge', 'Los Van Van', 'Rubens Bassini', 'Quinta Feira', 'Bomba Estéreo', 'Amadou & Mariam', 'Tinariwen', 'Manu Dibango', 'The Budos Band', 'Celia Cruz', 'Jorge Ben Jor', 'Malian Music (Various Artists)', 'Sun Ra', 'The Headhunters', 'Afrobeat Academy', 'Hossam Ramzy', 'Grupo Fantasma', 'Djembe Drumming (Various Artists)', 'Femi Kuti', "Brazil's Berimbau Music (Various Artists)", 'Grupo Niche', 'Conjunto Primavera', 'Quantic', 'Caribou', 'Cheikh Lo', 'Oumou Sangaré', 'Fatoumata Diawara', 'Ebo Taylor', 'Bassekou Kouyaté', "Youssou N'Dour", 'Gigi', 'Fanfare Ciocărlia', 'Feel free to explore these artists and songs for great percussion and vocal samples!']
+[2025-04-12T16:21:50.545+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Mongo Santamaria
+[2025-04-12T16:21:51.298+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-12T16:21:51.301+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-12T16:21:51.864+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS_STAGING ( title STRING, youtube_url STR...]
+[2025-04-12T16:21:52.220+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-12T16:21:52.233+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-12T16:21:52.242+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-12T16:21:52.711+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-12T16:21:52.713+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-12T16:21:52.778+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-12T16:21:52.779+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-12T16:21:52.779+0000] {logging_mixin.py:188} INFO - ✅ Loaded 1 rows to Snowflake.
+[2025-04-12T16:21:52.779+0000] {connection.py:718} INFO - closed
+[2025-04-12T16:21:52.807+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-12T16:21:52.852+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-12T16:21:52.866+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=rag_daily_discovery, task_id=run_discovery_flow, execution_date=20250412T162142, start_date=20250412T162144, end_date=20250412T162152
+[2025-04-12T16:21:52.929+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-12T16:21:52.952+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
