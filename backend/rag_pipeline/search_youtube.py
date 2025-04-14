@@ -15,7 +15,7 @@ YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search"
 YOUTUBE_VIDEO_DETAILS_URL = "https://www.googleapis.com/youtube/v3/videos"
 
 # Throttle limits with sensible defaults
-MAX_QUERIES = int(os.getenv("MAX_QUERIES", 1))
+MAX_QUERIES = int(os.getenv("MAX_QUERIES", 10))
 MAX_RESULTS_PER_QUERY = int(os.getenv("MAX_RESULTS", 1))
 
 def iso_duration_to_seconds(duration_str):
@@ -113,3 +113,40 @@ def search_many(queries, max_results=MAX_RESULTS_PER_QUERY):
         all_results.extend(vids)
 
     return pd.DataFrame(all_results)
+
+from openai import OpenAI
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def enrich_with_llm(title, description=""):
+    prompt = f"""
+Given the following YouTube title and description, identify:
+
+1. The artist name(s)
+2. The genre
+3. Whether the sample likely includes: isolated drums, vocals, both, or neither
+4. Decade song was released, using the format "1970s", "1980s", etc.
+
+Respond with JSON like:
+{{
+  "artist": "artist name",
+  "genre": "genre name",
+  "sample_type": "drums | vocals | both | neither"
+  "decade": "decade"
+}}
+
+Title: {title}
+Description: {description}
+"""
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.7
+        )
+        text = response.choices[0].message.content
+        return json.loads(text)
+    except Exception as e:
+        print(f"⚠️ LLM enrichment failed: {e}")
+        return {"artist": "", "genre": "", "sample_type": "", "decade": ""}

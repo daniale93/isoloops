@@ -1,0 +1,57 @@
+[2025-04-14T12:22:57.576+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-14T12:22:53.688351+00:00 [queued]>
+[2025-04-14T12:22:57.580+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-14T12:22:53.688351+00:00 [queued]>
+[2025-04-14T12:22:57.581+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-14T12:22:57.588+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_discovery_flow> on 2025-04-14 12:22:53.688351+00:00
+[2025-04-14T12:22:57.605+0000] {standard_task_runner.py:60} INFO - Started process 107 to run task
+[2025-04-14T12:22:57.610+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'rag_daily_discovery', 'run_discovery_flow', 'manual__2025-04-14T12:22:53.688351+00:00', '--job-id', '210', '--raw', '--subdir', 'DAGS_FOLDER/rag_daily_discovery.py', '--cfg-path', '/tmp/tmp2bixblcv']
+[2025-04-14T12:22:57.615+0000] {standard_task_runner.py:88} INFO - Job 210: Subtask run_discovery_flow
+[2025-04-14T12:22:57.656+0000] {task_command.py:423} INFO - Running <TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-14T12:22:53.688351+00:00 [running]> on host d8146153ddc3
+[2025-04-14T12:22:57.740+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='rag_daily_discovery' AIRFLOW_CTX_TASK_ID='run_discovery_flow' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T12:22:53.688351+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T12:22:53.688351+00:00'
+[2025-04-14T12:23:01.580+0000] {logging_mixin.py:188} INFO - 🔍 Raw queries from LLM: ['Fela Kuti', 'Tinariwen', 'Caetano Veloso', 'Angélique Kidjo', "Youssou N'Dour", 'Silvio Rodríguez', 'Bombino', 'Hozier', 'Susana Baca', 'Mory Kanté']
+[2025-04-14T12:23:01.582+0000] {logging_mixin.py:188} INFO - 🧠 Prompt used: Give me a list of 10 musicians from Africa, Latin America, or Southeast Asia whose recordings feature minimal arrangements or clean percussive moments. List only the names—no extra explanation.
+[2025-04-14T12:23:01.582+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Fela Kuti
+[2025-04-14T12:23:02.208+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Tinariwen
+[2025-04-14T12:23:02.667+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Caetano Veloso
+[2025-04-14T12:23:03.036+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Angélique Kidjo
+[2025-04-14T12:23:03.603+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Youssou N'Dour
+[2025-04-14T12:23:04.091+0000] {logging_mixin.py:188} INFO - ⏩ Skipping k9V3Itsl-vc due to duration (4935s)
+[2025-04-14T12:23:04.092+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Silvio Rodríguez
+[2025-04-14T12:23:04.590+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Bombino
+[2025-04-14T12:23:05.015+0000] {logging_mixin.py:188} INFO - ⏩ Skipping A7My5IpEzVM due to duration (833s)
+[2025-04-14T12:23:05.017+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Hozier
+[2025-04-14T12:23:05.503+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Susana Baca
+[2025-04-14T12:23:05.884+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Mory Kanté
+[2025-04-14T12:23:06.362+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-14T12:23:06.364+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-14T12:23:06.954+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS_STAGING ( title STRING, youtube_url STR...]
+[2025-04-14T12:23:07.043+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T12:23:07.044+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-14T12:23:07.048+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-14T12:23:07.149+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T12:23:07.163+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/rag_daily_discovery.py", line 34, in discovery_flow
+    load_to_snowflake(results_df, chatgpt_prompt=prompt_used)
+  File "/opt/airflow/backend/rag_pipeline/load_to_snowflake.py", line 90, in load_to_snowflake
+    cursor.execute(merge_sql, values)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 1132, in execute
+    Error.errorhandler_wrapper(self.connection, self, error_class, errvalue)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 290, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 345, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 221, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 000904 (42000): 01bbaee7-020d-07ca-000d-5acb000ab09a: SQL compilation error: error line 9 at position 59
+invalid identifier 'CHATGPT_PROMPT'
+[2025-04-14T12:23:07.189+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=rag_daily_discovery, task_id=run_discovery_flow, execution_date=20250414T122253, start_date=20250414T122257, end_date=20250414T122307
+[2025-04-14T12:23:07.201+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 210 for task run_discovery_flow (000904 (42000): 01bbaee7-020d-07ca-000d-5acb000ab09a: SQL compilation error: error line 9 at position 59
+invalid identifier 'CHATGPT_PROMPT'; 107)
+[2025-04-14T12:23:07.253+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-14T12:23:07.291+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

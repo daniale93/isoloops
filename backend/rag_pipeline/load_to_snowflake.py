@@ -8,7 +8,7 @@ from pathlib import Path
 env_path = Path(__file__).resolve().parents[2] / ".env"
 load_dotenv(dotenv_path=env_path)
 
-def load_to_snowflake(df: pd.DataFrame):
+def load_to_snowflake(df: pd.DataFrame, chatgpt_prompt: str = ""):
     if df.empty:
         print("⚠️ No data to load.")
         return
@@ -45,7 +45,9 @@ def load_to_snowflake(df: pd.DataFrame):
         view_count NUMBER,
         like_count NUMBER,
         comment_count NUMBER,
-        resolution STRING
+        resolution STRING,
+        chatgpt_prompt STRING
+        artist STRING
     )
     """)
 
@@ -58,14 +60,14 @@ def load_to_snowflake(df: pd.DataFrame):
         title, youtube_url, start_time, end_time, sample_type,
         description, genre, decade, start_seconds, end_seconds,
         duration, query_used, timestamp_loaded, youtube_rank,
-        view_count, like_count, comment_count, resolution
+        view_count, like_count, comment_count, resolution, chatgpt_prompt
       )
       VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
 
     for _, row in df.iterrows():
         values = (
-            row.get("youtube_url"),
+            row.get("youtube_url"),  # for USING
             row.get("title"),
             row.get("youtube_url"),
             "",  # start_time
@@ -84,6 +86,7 @@ def load_to_snowflake(df: pd.DataFrame):
             row.get("like_count"),
             row.get("comment_count"),
             row.get("resolution"),
+            chatgpt_prompt
         )
         cursor.execute(merge_sql, values)
 
