@@ -4474,3 +4474,215 @@ Please take a look at these docs to improve your DAG import time:
 [2025-04-14T17:00:57.260+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:00:57.260+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
 [2025-04-14T17:00:57.328+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/load_to_snowflake.py
 [2025-04-14T17:00:57.349+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_to_snowflake.py took 16.662 seconds
+[2025-04-14T17:01:27.848+0000] {processor.py:161} INFO - Started process (PID=6998) to work on /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:01:27.862+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_to_snowflake.py for tasks to queue
+[2025-04-14T17:01:27.866+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:27.865+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:01:28.365+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:28.365+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-14T17:01:28.365+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:28.365+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-14T17:01:29.026+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:29.025+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS ( title STRING, youtube_url STRING, sta...]
+[2025-04-14T17:01:29.133+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:29.133+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:29.136+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:29.134+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-14T17:01:29.138+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:29.138+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Coro Miyare - Daniel Diaz y Ja...]
+[2025-04-14T17:01:29.787+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:29.786+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:29.789+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:29.788+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'The Winstons - Amen Brother' A...]
+[2025-04-14T17:01:30.826+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:30.825+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:30.828+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:30.828+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Rubens Bassini, Los Latinos - ...]
+[2025-04-14T17:01:31.429+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:31.428+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:31.431+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:31.431+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Yussef Dayes - Chasing The Dru...]
+[2025-04-14T17:01:32.019+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:32.018+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:32.020+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:32.019+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'IKE TURNER - Funky Mule' AS ti...]
+[2025-04-14T17:01:32.650+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:32.650+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:32.652+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:32.652+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Llamada de Despedida' AS title...]
+[2025-04-14T17:01:33.313+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:33.313+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:33.315+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:33.315+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Kunchuzo' AS title, 'https://w...]
+[2025-04-14T17:01:33.929+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:33.928+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:33.930+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:33.930+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Anzala, Dolor, Vélo - Ti Fi La...]
+[2025-04-14T17:01:35.221+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:35.220+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:35.224+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:35.223+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Missié L\'Abbé' AS title, 'htt...]
+[2025-04-14T17:01:35.934+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:35.933+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:35.935+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:35.935+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Camille Yarbrough - Take Yo\' ...]
+[2025-04-14T17:01:36.754+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:36.753+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:36.755+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:36.755+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Security Of The First World' A...]
+[2025-04-14T17:01:37.622+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:37.621+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:37.625+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:37.624+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Something’s Got a Hold on Me' ...]
+[2025-04-14T17:01:38.360+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:38.359+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:38.361+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:38.361+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Just Brothers - Sliced Tomatoe...]
+[2025-04-14T17:01:39.039+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:39.039+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:39.041+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:39.041+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Marinheiro Só.' AS title, 'htt...]
+[2025-04-14T17:01:40.186+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:40.186+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:40.187+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:40.187+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Bozá Nueva Gaita - El Evangeli...]
+[2025-04-14T17:01:40.741+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:40.740+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:40.741+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:40.741+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Toqui Pra Yanssan' AS title, '...]
+[2025-04-14T17:01:41.164+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:41.163+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:41.165+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:41.165+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'AZÚCA / EL LORO Y LA LORA (Can...]
+[2025-04-14T17:01:41.657+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:41.656+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:41.657+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:41.657+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Cumbia Moderna De Soledad - En...]
+[2025-04-14T17:01:42.370+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:42.369+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:42.372+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:42.372+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'P18-La Verdolaga' AS title, 'h...]
+[2025-04-14T17:01:43.005+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:43.003+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:43.008+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:43.008+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Labi Siffre - My Song' AS titl...]
+[2025-04-14T17:01:43.646+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:43.645+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:01:43.647+0000] {logging_mixin.py:188} INFO - Data uploaded to Snowflake!
+[2025-04-14T17:01:43.648+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:43.648+0000] {connection.py:718} INFO - closed
+[2025-04-14T17:01:43.682+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:01:43.682+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-14T17:01:43.777+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:01:43.814+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_to_snowflake.py took 15.973 seconds
+[2025-04-14T17:02:14.010+0000] {processor.py:161} INFO - Started process (PID=7078) to work on /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:02:14.030+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_to_snowflake.py for tasks to queue
+[2025-04-14T17:02:14.032+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:14.032+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:02:14.331+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:14.331+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-14T17:02:14.332+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:14.332+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-14T17:02:14.741+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:14.741+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS ( title STRING, youtube_url STRING, sta...]
+[2025-04-14T17:02:14.852+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:14.851+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:14.853+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:14.852+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-14T17:02:14.854+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:14.854+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Coro Miyare - Daniel Diaz y Ja...]
+[2025-04-14T17:02:15.412+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:15.411+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:15.414+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:15.414+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'The Winstons - Amen Brother' A...]
+[2025-04-14T17:02:16.363+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:16.363+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:16.364+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:16.364+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Rubens Bassini, Los Latinos - ...]
+[2025-04-14T17:02:17.026+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:17.026+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:17.028+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:17.028+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Yussef Dayes - Chasing The Dru...]
+[2025-04-14T17:02:17.815+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:17.815+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:17.816+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:17.816+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'IKE TURNER - Funky Mule' AS ti...]
+[2025-04-14T17:02:18.592+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:18.591+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:18.595+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:18.594+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Llamada de Despedida' AS title...]
+[2025-04-14T17:02:19.534+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:19.533+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:19.536+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:19.536+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Kunchuzo' AS title, 'https://w...]
+[2025-04-14T17:02:20.112+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:20.112+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:20.113+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:20.113+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Anzala, Dolor, Vélo - Ti Fi La...]
+[2025-04-14T17:02:20.658+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:20.658+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:20.659+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:20.659+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Missié L\'Abbé' AS title, 'htt...]
+[2025-04-14T17:02:21.144+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:21.144+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:21.145+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:21.145+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Camille Yarbrough - Take Yo\' ...]
+[2025-04-14T17:02:21.809+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:21.808+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:21.810+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:21.810+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Security Of The First World' A...]
+[2025-04-14T17:02:22.473+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:22.472+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:22.475+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:22.475+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Something’s Got a Hold on Me' ...]
+[2025-04-14T17:02:23.209+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:23.209+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:23.210+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:23.210+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Just Brothers - Sliced Tomatoe...]
+[2025-04-14T17:02:23.960+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:23.959+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:23.962+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:23.962+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Marinheiro Só.' AS title, 'htt...]
+[2025-04-14T17:02:24.448+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:24.447+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:24.450+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:24.450+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Bozá Nueva Gaita - El Evangeli...]
+[2025-04-14T17:02:24.900+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:24.900+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:24.901+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:24.901+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Toqui Pra Yanssan' AS title, '...]
+[2025-04-14T17:02:25.599+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:25.599+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:25.600+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:25.600+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'AZÚCA / EL LORO Y LA LORA (Can...]
+[2025-04-14T17:02:26.186+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:26.185+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:26.186+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:26.186+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Cumbia Moderna De Soledad - En...]
+[2025-04-14T17:02:26.827+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:26.827+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:26.829+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:26.829+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'P18-La Verdolaga' AS title, 'h...]
+[2025-04-14T17:02:27.387+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:27.387+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:27.388+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:27.388+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Labi Siffre - My Song' AS titl...]
+[2025-04-14T17:02:28.090+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:28.089+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:28.091+0000] {logging_mixin.py:188} INFO - Data uploaded to Snowflake!
+[2025-04-14T17:02:28.091+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:28.091+0000] {connection.py:718} INFO - closed
+[2025-04-14T17:02:28.123+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:28.123+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-14T17:02:28.205+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:02:28.227+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_to_snowflake.py took 14.222 seconds
+[2025-04-14T17:02:58.680+0000] {processor.py:161} INFO - Started process (PID=7205) to work on /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:02:58.698+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_to_snowflake.py for tasks to queue
+[2025-04-14T17:02:58.701+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:58.700+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:02:59.015+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:59.014+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-14T17:02:59.015+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:59.015+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-14T17:02:59.393+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:59.392+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS ( title STRING, youtube_url STRING, sta...]
+[2025-04-14T17:02:59.508+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:59.508+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:02:59.509+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:59.509+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-14T17:02:59.512+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:02:59.511+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Coro Miyare - Daniel Diaz y Ja...]
+[2025-04-14T17:03:00.233+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:00.232+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:00.235+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:00.234+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'The Winstons - Amen Brother' A...]
+[2025-04-14T17:03:00.858+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:00.857+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:00.859+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:00.859+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Rubens Bassini, Los Latinos - ...]
+[2025-04-14T17:03:01.502+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:01.501+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:01.505+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:01.504+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Yussef Dayes - Chasing The Dru...]
+[2025-04-14T17:03:02.195+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:02.195+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:02.196+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:02.196+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'IKE TURNER - Funky Mule' AS ti...]
+[2025-04-14T17:03:02.858+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:02.858+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:02.860+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:02.859+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Llamada de Despedida' AS title...]
+[2025-04-14T17:03:03.413+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:03.412+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:03.415+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:03.415+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Kunchuzo' AS title, 'https://w...]
+[2025-04-14T17:03:03.898+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:03.898+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:03.899+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:03.899+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Anzala, Dolor, Vélo - Ti Fi La...]
+[2025-04-14T17:03:04.602+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:04.601+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:04.605+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:04.604+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Missié L\'Abbé' AS title, 'htt...]
+[2025-04-14T17:03:05.524+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:05.523+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:05.525+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:05.525+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Camille Yarbrough - Take Yo\' ...]
+[2025-04-14T17:03:06.015+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:06.015+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:06.017+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:06.016+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Security Of The First World' A...]
+[2025-04-14T17:03:06.751+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:06.750+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:06.752+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:06.752+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Something’s Got a Hold on Me' ...]
+[2025-04-14T17:03:07.381+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:07.380+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:07.382+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:07.382+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Just Brothers - Sliced Tomatoe...]
+[2025-04-14T17:03:07.930+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:07.929+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:07.933+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:07.932+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Marinheiro Só.' AS title, 'htt...]
+[2025-04-14T17:03:08.597+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:08.596+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:08.599+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:08.599+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Bozá Nueva Gaita - El Evangeli...]
+[2025-04-14T17:03:09.068+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:09.067+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:09.069+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:09.069+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Toqui Pra Yanssan' AS title, '...]
+[2025-04-14T17:03:09.826+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:09.825+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:09.829+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:09.828+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'AZÚCA / EL LORO Y LA LORA (Can...]
+[2025-04-14T17:03:10.338+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:10.336+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:10.340+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:10.340+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Cumbia Moderna De Soledad - En...]
+[2025-04-14T17:03:10.951+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:10.950+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:10.953+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:10.953+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'P18-La Verdolaga' AS title, 'h...]
+[2025-04-14T17:03:11.541+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:11.540+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:11.543+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:11.543+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Labi Siffre - My Song' AS titl...]
+[2025-04-14T17:03:12.280+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:12.280+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:12.281+0000] {logging_mixin.py:188} INFO - Data uploaded to Snowflake!
+[2025-04-14T17:03:12.282+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:12.281+0000] {connection.py:718} INFO - closed
+[2025-04-14T17:03:12.311+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:12.310+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-14T17:03:12.376+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:03:12.418+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_to_snowflake.py took 13.747 seconds
+[2025-04-14T17:03:42.578+0000] {processor.py:161} INFO - Started process (PID=7289) to work on /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:03:42.602+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/load_to_snowflake.py for tasks to queue
+[2025-04-14T17:03:42.606+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:42.606+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:03:42.988+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:42.988+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-14T17:03:42.989+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:42.989+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-14T17:03:43.839+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:43.838+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS ( title STRING, youtube_url STRING, sta...]
+[2025-04-14T17:03:43.999+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:43.998+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:44.001+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:44.000+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-14T17:03:44.004+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:44.004+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Coro Miyare - Daniel Diaz y Ja...]
+[2025-04-14T17:03:44.742+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:44.741+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:44.744+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:44.744+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'The Winstons - Amen Brother' A...]
+[2025-04-14T17:03:45.372+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:45.372+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:45.375+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:45.374+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Rubens Bassini, Los Latinos - ...]
+[2025-04-14T17:03:46.085+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:46.085+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:46.088+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:46.088+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Yussef Dayes - Chasing The Dru...]
+[2025-04-14T17:03:46.860+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:46.859+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:46.862+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:46.862+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'IKE TURNER - Funky Mule' AS ti...]
+[2025-04-14T17:03:47.329+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:47.328+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:47.330+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:47.330+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Llamada de Despedida' AS title...]
+[2025-04-14T17:03:47.796+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:47.795+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:47.798+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:47.797+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Kunchuzo' AS title, 'https://w...]
+[2025-04-14T17:03:48.435+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:48.434+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:48.436+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:48.436+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Anzala, Dolor, Vélo - Ti Fi La...]
+[2025-04-14T17:03:49.063+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:49.061+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:49.065+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:49.065+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Missié L\'Abbé' AS title, 'htt...]
+[2025-04-14T17:03:49.677+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:49.676+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:49.680+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:49.680+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Camille Yarbrough - Take Yo\' ...]
+[2025-04-14T17:03:50.321+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:50.320+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:50.323+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:50.323+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Security Of The First World' A...]
+[2025-04-14T17:03:50.872+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:50.871+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:50.875+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:50.874+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Something’s Got a Hold on Me' ...]
+[2025-04-14T17:03:51.453+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:51.452+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:51.455+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:51.454+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Just Brothers - Sliced Tomatoe...]
+[2025-04-14T17:03:52.050+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:52.050+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:52.052+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:52.051+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Marinheiro Só.' AS title, 'htt...]
+[2025-04-14T17:03:52.646+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:52.645+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:52.648+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:52.647+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Bozá Nueva Gaita - El Evangeli...]
+[2025-04-14T17:03:53.156+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:53.155+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:53.157+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:53.157+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Toqui Pra Yanssan' AS title, '...]
+[2025-04-14T17:03:53.738+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:53.737+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:53.740+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:53.739+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'AZÚCA / EL LORO Y LA LORA (Can...]
+[2025-04-14T17:03:54.564+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:54.564+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:54.566+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:54.566+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Cumbia Moderna De Soledad - En...]
+[2025-04-14T17:03:55.197+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:55.196+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:55.197+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:55.197+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'P18-La Verdolaga' AS title, 'h...]
+[2025-04-14T17:03:55.914+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:55.914+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:55.915+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:55.915+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS AS target USING (SELECT 'Labi Siffre - My Song' AS titl...]
+[2025-04-14T17:03:56.575+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:56.574+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T17:03:56.576+0000] {logging_mixin.py:188} INFO - Data uploaded to Snowflake!
+[2025-04-14T17:03:56.576+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:56.576+0000] {connection.py:718} INFO - closed
+[2025-04-14T17:03:56.609+0000] {logging_mixin.py:188} INFO - [2025-04-14T17:03:56.608+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-14T17:03:56.674+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/load_to_snowflake.py
+[2025-04-14T17:03:56.732+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/load_to_snowflake.py took 14.169 seconds

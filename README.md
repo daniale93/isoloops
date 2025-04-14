@@ -29,8 +29,8 @@ The architecture includes:
 - Scheduled with daily Airflow DAGs -- from discovery to ingestion
 
 ### 2. **YouTube Search & Ranking**
-- Searches YouTube for videos by the selected artists.
-- Filters by duration (1–10 min), resolution, and engagement.
+- Searches YouTube for videos by the selected artists
+- Filters by duration (1–10 min), resolution, and engagement
 - These queries are also stored in order to improve track finding in Youtube
 
 ### 3. **Sample Detection & Metadata Extraction**
@@ -41,7 +41,7 @@ The architecture includes:
 - Tables: `SAMPLED_SONGS`, `SAMPLED_SONGS_STAGING`, `SAMPLED_SONGS_ENRICHED`
 
 ### 5. **API + Frontend (Vercel, React)**
-- A lightweight Vercel-hosted API pulls from Snowflake
+- Vercel REST API pulls necessary data from Snowflake
 - Frontend lets users explore sampleable songs with filters and a "Surprise Me" feature
 
 ---
