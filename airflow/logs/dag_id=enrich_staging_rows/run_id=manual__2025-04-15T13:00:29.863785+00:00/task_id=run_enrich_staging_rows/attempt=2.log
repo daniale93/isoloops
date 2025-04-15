@@ -1,0 +1,519 @@
+[2025-04-15T13:01:58.377+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-15T13:00:29.863785+00:00 [queued]>
+[2025-04-15T13:01:58.385+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-15T13:00:29.863785+00:00 [queued]>
+[2025-04-15T13:01:58.385+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2025-04-15T13:01:58.393+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_enrich_staging_rows> on 2025-04-15 13:00:29.863785+00:00
+[2025-04-15T13:01:58.400+0000] {standard_task_runner.py:60} INFO - Started process 18573 to run task
+[2025-04-15T13:01:58.404+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enrich_staging_rows', 'run_enrich_staging_rows', 'manual__2025-04-15T13:00:29.863785+00:00', '--job-id', '230', '--raw', '--subdir', 'DAGS_FOLDER/enrich_staging_rows_dag.py', '--cfg-path', '/tmp/tmpb0nguvp4']
+[2025-04-15T13:01:58.405+0000] {standard_task_runner.py:88} INFO - Job 230: Subtask run_enrich_staging_rows
+[2025-04-15T13:01:58.457+0000] {task_command.py:423} INFO - Running <TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-15T13:00:29.863785+00:00 [running]> on host d8146153ddc3
+[2025-04-15T13:01:58.518+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enrich_staging_rows' AIRFLOW_CTX_TASK_ID='run_enrich_staging_rows' AIRFLOW_CTX_EXECUTION_DATE='2025-04-15T13:00:29.863785+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-15T13:00:29.863785+00:00'
+[2025-04-15T13:01:58.520+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-15T13:01:58.521+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-15T13:01:58.945+0000] {cursor.py:1028} INFO - query: [SELECT * FROM SAMPLED_SONGS_STAGING WHERE artist IS NULL OR genre IS NULL]
+[2025-04-15T13:01:59.091+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:01:59.094+0000] {cursor.py:1205} INFO - Number of results in first chunk: 45
+[2025-04-15T13:02:00.100+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Mongo Santamaria",
+  "genre": "Salsa",
+  "description": "None",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:00.102+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Mongo Santamaria', genre = 'Salsa', d...]
+[2025-04-15T13:02:00.831+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:03.507+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Unknown",
+  "genre": "Rock",
+  "description": "No description provided.",
+  "decade": "Unknown",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:03.526+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Unknown', genre = 'Rock', description...]
+[2025-04-15T13:02:04.100+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:06.870+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Fela Kuti",
+  "genre": "Afrobeat",
+  "description": null,
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:06.874+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Fela Kuti', genre = 'Afrobeat', descr...]
+[2025-04-15T13:02:07.416+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:09.808+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Ali Farka Touré & Toumani Diabaté",
+  "genre": "World Music",
+  "description": "None",
+  "decade": "2000s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:02:09.817+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Ali Farka Touré & Toumani Diabaté', g...]
+[2025-04-15T13:02:10.342+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:12.490+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Amadou & Mariam",
+  "genre": "World Music",
+  "description": "None",
+  "decade": "2000s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:12.493+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Amadou & Mariam', genre = 'World Musi...]
+[2025-04-15T13:02:12.892+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:15.785+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+    "artist": "Os Mutantes",
+    "genre": "Tropicália",
+    "description": "A classic song by the Brazilian band Os Mutantes, known for their influential role in the Tropicália movement.",
+    "decade": "1960s",
+    "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:15.797+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Os Mutantes', genre = 'Tropicália', d...]
+[2025-04-15T13:02:16.509+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:18.762+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Tinariwen",
+  "genre": "World Music",
+  "description": "None",
+  "decade": "2010s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:18.765+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Tinariwen', genre = 'World Music', de...]
+[2025-04-15T13:02:19.455+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:21.713+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Manu Dibango",
+  "genre": "Afrobeat",
+  "description": "None",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:21.717+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Manu Dibango', genre = 'Afrobeat', de...]
+[2025-04-15T13:02:22.528+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:25.212+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Seu Jorge",
+  "genre": "MPB",
+  "description": "A popular Brazilian song performed by Seu Jorge.",
+  "decade": "2010s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:25.215+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Seu Jorge', genre = 'MPB', descriptio...]
+[2025-04-15T13:02:25.824+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:28.411+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Baaba Maal",
+  "genre": "World Music",
+  "description": "None",
+  "decade": "Unknown",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:28.415+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Baaba Maal', genre = 'World Music', d...]
+[2025-04-15T13:02:29.133+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:31.943+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Los Ángeles Azules, Alejandro Fernández",
+  "genre": "Cumbia",
+  "description": "Official music video for 'La Cumbia Triste' by Los Ángeles Azules and Alejandro Fernández.",
+  "decade": "2020s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:31.946+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Los Ángeles Azules, Alejandro Fernánd...]
+[2025-04-15T13:02:32.781+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:35.654+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Toumani Diabaté & Sidiki Diabaté",
+  "genre": "World Music",
+  "description": null,
+  "decade": null,
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:35.657+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Toumani Diabaté & Sidiki Diabaté', ge...]
+[2025-04-15T13:02:36.468+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:38.831+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Béla Fleck",
+  "genre": "Bluegrass",
+  "description": "None",
+  "decade": "2020s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:02:38.833+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Béla Fleck', genre = 'Bluegrass', des...]
+[2025-04-15T13:02:39.281+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:42.107+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Kodo",
+  "genre": "World Music",
+  "description": "Japanese drummers performing Taiko with giant drums.",
+  "decade": "1980s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:02:42.110+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Kodo', genre = 'World Music', descrip...]
+[2025-04-15T13:02:43.096+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:45.229+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Yo-Yo Ma",
+  "genre": "Classical",
+  "description": "None",
+  "decade": "1990s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:45.232+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Yo-Yo Ma', genre = 'Classical', descr...]
+[2025-04-15T13:02:45.931+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:48.239+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Unknown",
+  "genre": "Folk",
+  "description": "None",
+  "decade": "Unknown",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:48.241+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Unknown', genre = 'Folk', description...]
+[2025-04-15T13:02:48.960+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:51.676+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Sandro Giacobbe",
+  "genre": "Pop",
+  "description": null,
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:51.679+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Sandro Giacobbe', genre = 'Pop', desc...]
+[2025-04-15T13:02:52.146+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:54.427+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Unknown",
+  "genre": "Pop",
+  "description": "None",
+  "decade": "Unknown",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:02:54.428+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Unknown', genre = 'Pop', description ...]
+[2025-04-15T13:02:55.112+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:02:57.437+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Bernard \"Pretty\" Purdie",
+  "genre": "Funk",
+  "description": "Funky Groovy Jam Session",
+  "decade": "1970s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:02:57.440+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Bernard "Pretty" Purdie', genre = 'Fu...]
+[2025-04-15T13:02:58.092+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:00.953+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Gil Scott-Heron",
+  "genre": "Soul",
+  "description": "None",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:00.956+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Gil Scott-Heron', genre = 'Soul', des...]
+[2025-04-15T13:03:01.509+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:04.237+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Lonnie Liston Smith",
+  "genre": "Jazz",
+  "description": "None",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:04.240+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Lonnie Liston Smith', genre = 'Jazz',...]
+[2025-04-15T13:03:04.999+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:07.958+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Unknown",
+  "genre": "Rock",
+  "description": "None",
+  "decade": "Unknown",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:07.964+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Unknown', genre = 'Rock', description...]
+[2025-04-15T13:03:08.502+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:11.558+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Dave Grusin & Lee Ritenour",
+  "genre": "Jazz",
+  "description": "Live performance of 'Mountain Dance' by Dave Grusin & Lee Ritenour",
+  "decade": "1980s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:03:11.568+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Dave Grusin & Lee Ritenour', genre = ...]
+[2025-04-15T13:03:12.358+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:15.281+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Marva Whitney & the J.B.'S",
+  "genre": "Funk",
+  "description": "A rare live TV performance from 1969 featuring Marva Whitney and the J.B.'S.",
+  "decade": "1960s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:03:15.284+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Marva Whitney & the J.B.\'S', genre =...]
+[2025-04-15T13:03:15.759+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:18.264+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Bob Marley",
+  "genre": "Reggae",
+  "description": null,
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:18.267+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Bob Marley', genre = 'Reggae', descri...]
+[2025-04-15T13:03:18.763+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:21.374+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Erykah Badu",
+  "genre": "Neo Soul",
+  "description": "Remix Edit of Erykah Badu's 'On & On'",
+  "decade": "1990s",
+  "sample_type": "remix"
+}
+```
+[2025-04-15T13:03:21.382+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Erykah Badu', genre = 'Neo Soul', des...]
+[2025-04-15T13:03:22.088+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:24.604+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Miriam Makeba",
+  "genre": "World Music",
+  "description": "Live performance of 'Pata Pata' by Miriam Makeba on The Ed Sullivan Show in 1967.",
+  "decade": "1960s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:03:24.608+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Miriam Makeba', genre = 'World Music'...]
+[2025-04-15T13:03:25.520+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:28.689+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Seun Kuti & Egypt 80",
+  "genre": "Afrobeat",
+  "description": "None",
+  "decade": "2020s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:03:28.719+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Seun Kuti & Egypt 80', genre = 'Afrob...]
+[2025-04-15T13:03:29.458+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:31.919+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Toots and the Maytals",
+  "genre": "Reggae",
+  "description": "None",
+  "decade": "1960s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:31.922+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Toots and the Maytals', genre = 'Regg...]
+[2025-04-15T13:03:32.622+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:35.022+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Angelique Kidjo",
+  "genre": "Afrobeat",
+  "description": null,
+  "decade": "1990s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:35.027+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Angelique Kidjo', genre = 'Afrobeat',...]
+[2025-04-15T13:03:35.761+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:38.639+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Les Nubians",
+  "genre": "Neo Soul",
+  "description": null,
+  "decade": "1990s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:38.643+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Les Nubians', genre = 'Neo Soul', des...]
+[2025-04-15T13:03:39.365+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:42.211+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Sizzla Kalonji",
+  "genre": "Reggae",
+  "description": "None",
+  "decade": "2000s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:42.215+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Sizzla Kalonji', genre = 'Reggae', de...]
+[2025-04-15T13:03:42.882+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:45.253+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Willie Bobo",
+  "genre": "Latin Jazz",
+  "description": "None",
+  "decade": "1960s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:45.256+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Willie Bobo', genre = 'Latin Jazz', d...]
+[2025-04-15T13:03:46.080+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:51.806+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Los Ángeles Negros",
+  "genre": "Bolero",
+  "description": "None",
+  "decade": "1970s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:03:51.817+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Los Ángeles Negros', genre = 'Bolero'...]
+[2025-04-15T13:03:52.542+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:55.238+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Pucho & His Latin Soul Brothers",
+  "genre": "Latin Jazz",
+  "description": "A lively and rhythmically engaging track by Pucho & His Latin Soul Brothers, showcasing a fusion of Latin and soul influences.",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:55.243+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Pucho & His Latin Soul Brothers', gen...]
+[2025-04-15T13:03:55.835+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:03:58.093+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Tania Maria",
+  "genre": "Jazz",
+  "description": "None",
+  "decade": "1980s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:03:58.095+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Tania Maria', genre = 'Jazz', descrip...]
+[2025-04-15T13:03:58.891+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:01.528+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Eddie Palmieri",
+  "genre": "Salsa",
+  "description": "None",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:04:01.532+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Eddie Palmieri', genre = 'Salsa', des...]
+[2025-04-15T13:04:02.303+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:08.046+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Sly & The Family Stone",
+  "genre": "Funk",
+  "description": "None",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:04:08.049+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Sly & The Family Stone', genre = 'Fun...]
+[2025-04-15T13:04:08.637+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:11.169+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Black Uhuru",
+  "genre": "Reggae",
+  "description": null,
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:04:11.171+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Black Uhuru', genre = 'Reggae', descr...]
+[2025-04-15T13:04:11.905+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:15.273+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Tito Puente",
+  "genre": "Salsa",
+  "description": "None",
+  "decade": "1960s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:04:15.304+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Tito Puente', genre = 'Salsa', descri...]
+[2025-04-15T13:04:15.980+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:18.200+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Ray Barretto",
+  "genre": "Salsa",
+  "description": "None",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:04:18.203+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Ray Barretto', genre = 'Salsa', descr...]
+[2025-04-15T13:04:18.663+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:21.167+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Mongo Santamaría",
+  "genre": "Latin Jazz",
+  "description": null,
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:04:21.171+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Mongo Santamaría', genre = 'Latin Jaz...]
+[2025-04-15T13:04:21.859+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:24.236+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Cal Tjader",
+  "genre": "Latin Jazz",
+  "description": "Here and Now",
+  "decade": "1960s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:04:24.245+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Cal Tjader', genre = 'Latin Jazz', de...]
+[2025-04-15T13:04:24.683+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:27.794+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Aniceto Molina",
+  "genre": "Cumbia",
+  "description": "Official video for 'El Machito' by Aniceto Molina.",
+  "decade": "Unknown",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:04:27.798+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Aniceto Molina', genre = 'Cumbia', de...]
+[2025-04-15T13:04:28.221+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:30.772+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Grupo Folklorico y Experimental Nuevayorquino",
+  "genre": "World Music",
+  "description": "None",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:04:30.773+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Grupo Folklorico y Experimental Nueva...]
+[2025-04-15T13:04:31.483+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:32.994+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-15T13:04:33.106+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:04:33.108+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-15T13:04:33.108+0000] {connection.py:718} INFO - closed
+[2025-04-15T13:04:33.148+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-15T13:04:33.220+0000] {logging_mixin.py:188} INFO - ✅ Enriched 45 rows in Snowflake.
+[2025-04-15T13:04:33.222+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-15T13:04:33.251+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=enrich_staging_rows, task_id=run_enrich_staging_rows, execution_date=20250415T130029, start_date=20250415T130158, end_date=20250415T130433
+[2025-04-15T13:04:33.294+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-15T13:04:33.324+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

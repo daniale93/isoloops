@@ -1,0 +1,59 @@
+[2025-04-15T00:00:02.236+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow scheduled__2025-04-14T00:00:00+00:00 [queued]>
+[2025-04-15T00:00:02.243+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow scheduled__2025-04-14T00:00:00+00:00 [queued]>
+[2025-04-15T00:00:02.244+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-15T00:00:02.259+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_discovery_flow> on 2025-04-14 00:00:00+00:00
+[2025-04-15T00:00:02.265+0000] {standard_task_runner.py:60} INFO - Started process 6727 to run task
+[2025-04-15T00:00:02.270+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'rag_daily_discovery', 'run_discovery_flow', 'scheduled__2025-04-14T00:00:00+00:00', '--job-id', '226', '--raw', '--subdir', 'DAGS_FOLDER/rag_daily_discovery.py', '--cfg-path', '/tmp/tmp5e4ff71y']
+[2025-04-15T00:00:02.272+0000] {standard_task_runner.py:88} INFO - Job 226: Subtask run_discovery_flow
+[2025-04-15T00:00:02.346+0000] {task_command.py:423} INFO - Running <TaskInstance: rag_daily_discovery.run_discovery_flow scheduled__2025-04-14T00:00:00+00:00 [running]> on host d8146153ddc3
+[2025-04-15T00:00:02.415+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='rag_daily_discovery' AIRFLOW_CTX_TASK_ID='run_discovery_flow' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-14T00:00:00+00:00'
+[2025-04-15T00:00:04.580+0000] {logging_mixin.py:188} INFO - 🔍 Raw queries from LLM: ['Tinariwen', 'Bomba Estéreo', 'Angélique Kidjo', 'Susana Baca', 'Fela Kuti', 'Gigi', "Youssou N'Dour", 'J Balvin', 'Nizami Bandhu', 'Rokia Traoré']
+[2025-04-15T00:00:04.582+0000] {logging_mixin.py:188} INFO - 🧠 Prompt used: Give me a list of 10 musicians from Africa, Latin America, or Southeast Asia whose recordings feature minimal arrangements or clean percussive moments. List only the names—no extra explanation.
+[2025-04-15T00:00:04.583+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Tinariwen
+[2025-04-15T00:00:05.259+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Bomba Estéreo
+[2025-04-15T00:00:05.867+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Angélique Kidjo
+[2025-04-15T00:00:06.381+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Susana Baca
+[2025-04-15T00:00:06.875+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Fela Kuti
+[2025-04-15T00:00:07.416+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Gigi
+[2025-04-15T00:00:07.919+0000] {logging_mixin.py:188} INFO - ⏩ Skipping YltKfJmGA0w due to duration (51s)
+[2025-04-15T00:00:07.921+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Youssou N'Dour
+[2025-04-15T00:00:08.466+0000] {logging_mixin.py:188} INFO - ⏩ Skipping k9V3Itsl-vc due to duration (4935s)
+[2025-04-15T00:00:08.469+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: J Balvin
+[2025-04-15T00:00:09.032+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Nizami Bandhu
+[2025-04-15T00:00:09.481+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Rokia Traoré
+[2025-04-15T00:00:09.981+0000] {logging_mixin.py:188} INFO - ⏩ Skipping xB_EEFcM6TE due to duration (689s)
+[2025-04-15T00:00:09.998+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-15T00:00:10.002+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-15T00:00:10.897+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS_STAGING ( title STRING, youtube_url STR...]
+[2025-04-15T00:00:11.025+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T00:00:11.047+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/rag_daily_discovery.py", line 34, in discovery_flow
+    load_to_snowflake(results_df, chatgpt_prompt=prompt_used)
+  File "/opt/airflow/backend/rag_pipeline/load_to_snowflake.py", line 29, in load_to_snowflake
+    cursor.execute("""
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/cursor.py", line 1132, in execute
+    Error.errorhandler_wrapper(self.connection, self, error_class, errvalue)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 290, in errorhandler_wrapper
+    handed_over = Error.hand_to_other_handler(
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 345, in hand_to_other_handler
+    cursor.errorhandler(connection, cursor, error_class, error_value)
+  File "/home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/errors.py", line 221, in default_errorhandler
+    raise error_class(
+snowflake.connector.errors.ProgrammingError: 001003 (42000): 01bbb1a0-020d-034d-000d-5acb000b4d96: SQL compilation error:
+syntax error line 21 at position 8 unexpected 'artist'.
+syntax error line 21 at position 15 unexpected 'STRING'.
+syntax error line 22 at position 4 unexpected ')'.
+[2025-04-15T00:00:11.079+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=rag_daily_discovery, task_id=run_discovery_flow, execution_date=20250414T000000, start_date=20250415T000002, end_date=20250415T000011
+[2025-04-15T00:00:11.097+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 226 for task run_discovery_flow (001003 (42000): 01bbb1a0-020d-034d-000d-5acb000b4d96: SQL compilation error:
+syntax error line 21 at position 8 unexpected 'artist'.
+syntax error line 21 at position 15 unexpected 'STRING'.
+syntax error line 22 at position 4 unexpected ')'.; 6727)
+[2025-04-15T00:00:11.128+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-15T00:00:11.164+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

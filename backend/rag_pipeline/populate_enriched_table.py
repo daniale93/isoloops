@@ -40,7 +40,9 @@ def populate_enriched_table():
         view_count NUMBER,
         like_count NUMBER,
         comment_count NUMBER,
-        resolution STRING
+        resolution STRING,
+        artist STRING,
+        chatgpt_prompt STRING
     );
     """)
 
@@ -79,7 +81,9 @@ def populate_enriched_table():
             row.get("VIEW_COUNT", 0),
             row.get("LIKE_COUNT", 0),
             row.get("COMMENT_COUNT", 0),
-            row.get("RESOLUTION", "")
+            row.get("RESOLUTION", ""),
+            row.get("ARTIST", ""),
+            row.get("CHATGPT_PROMPT", "")
         ]
 
         cursor.execute("""
@@ -104,13 +108,15 @@ def populate_enriched_table():
                 target.view_count = %s,
                 target.like_count = %s,
                 target.comment_count = %s,
-                target.resolution = %s
+                target.resolution = %s,
+                target.artist = %s,
+                target.chatgpt_prompt = %s       
             WHEN NOT MATCHED THEN INSERT (
                 youtube_url, title, start_time, end_time, sample_type, description,
                 genre, decade, start_seconds, end_seconds, duration,
                 query_used, timestamp_loaded, youtube_rank,
-                video_duration, view_count, like_count, comment_count, resolution
-            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                video_duration, view_count, like_count, comment_count, resolution, artist, chatgpt_prompt
+            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         """, [values[0]] + values[1:] + values)
 
     conn.commit()

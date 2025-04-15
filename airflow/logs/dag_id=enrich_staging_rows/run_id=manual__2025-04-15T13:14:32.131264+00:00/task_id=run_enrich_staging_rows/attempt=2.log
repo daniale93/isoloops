@@ -1,0 +1,519 @@
+[2025-04-15T13:17:18.203+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-15T13:14:32.131264+00:00 [queued]>
+[2025-04-15T13:17:18.207+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-15T13:14:32.131264+00:00 [queued]>
+[2025-04-15T13:17:18.208+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 3
+[2025-04-15T13:17:18.214+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_enrich_staging_rows> on 2025-04-15 13:14:32.131264+00:00
+[2025-04-15T13:17:18.229+0000] {standard_task_runner.py:60} INFO - Started process 18814 to run task
+[2025-04-15T13:17:18.237+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enrich_staging_rows', 'run_enrich_staging_rows', 'manual__2025-04-15T13:14:32.131264+00:00', '--job-id', '233', '--raw', '--subdir', 'DAGS_FOLDER/enrich_staging_rows_dag.py', '--cfg-path', '/tmp/tmp8vj8_gqn']
+[2025-04-15T13:17:18.239+0000] {standard_task_runner.py:88} INFO - Job 233: Subtask run_enrich_staging_rows
+[2025-04-15T13:17:18.277+0000] {task_command.py:423} INFO - Running <TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-15T13:14:32.131264+00:00 [running]> on host d8146153ddc3
+[2025-04-15T13:17:18.335+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enrich_staging_rows' AIRFLOW_CTX_TASK_ID='run_enrich_staging_rows' AIRFLOW_CTX_EXECUTION_DATE='2025-04-15T13:14:32.131264+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-15T13:14:32.131264+00:00'
+[2025-04-15T13:17:18.337+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-15T13:17:18.338+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-15T13:17:18.709+0000] {cursor.py:1028} INFO - query: [SELECT * FROM SAMPLED_SONGS_STAGING WHERE artist IS NULL OR genre IS NULL]
+[2025-04-15T13:17:18.807+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:17:18.808+0000] {cursor.py:1205} INFO - Number of results in first chunk: 45
+[2025-04-15T13:17:20.791+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Mongo Santamaria",
+  "genre": "Latin Jazz",
+  "description": "This track likely features vibrant percussion, horns, and rhythmic grooves typical of Latin Jazz. It offers rich sampling potential with its energetic instrumental sections and percussion that can be used for creating rhythmic loops or adding lively elements to a track.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:17:20.807+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Mongo Santamaria', genre = 'Latin Jaz...]
+[2025-04-15T13:17:21.534+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:17:24.772+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Ennio Morricone",
+  "genre": "Classical",
+  "description": "This video likely contains a classical or orchestral piece, possibly a film score or soundtrack, which can provide rich instrumental sections and dramatic themes suitable for sampling.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:17:24.791+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Ennio Morricone', genre = 'Classical'...]
+[2025-04-15T13:17:25.311+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:17:29.614+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Fela Kuti",
+  "genre": "Afrobeat",
+  "description": "This video likely contains a rich and vibrant Afrobeat track with complex polyrhythms, energetic horn sections, and socially conscious lyrics, making it useful for sampling instrumental sections, isolated percussion, or breakdowns. The groove and rhythm can add a lively and authentic Afrobeat feel to modern productions.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:17:29.621+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Fela Kuti', genre = 'Afrobeat', descr...]
+[2025-04-15T13:17:30.250+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:17:33.684+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Ali Farka Touré & Toumani Diabaté",
+  "genre": "World Music",
+  "description": "This video likely features a live performance of traditional Malian music, blending guitar and kora. It offers rich, organic instrumental sections ideal for sampling in genres seeking an authentic African sound.",
+  "decade": "2000s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:17:33.709+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Ali Farka Touré & Toumani Diabaté', g...]
+[2025-04-15T13:17:34.365+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:17:37.637+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Amadou & Mariam",
+  "genre": "World Music",
+  "description": "This video likely contains a rich blend of traditional African sounds with contemporary influences, offering potential for sampling unique guitar riffs, rhythmic patterns, and soulful vocal harmonies.",
+  "decade": "1990s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:17:37.640+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Amadou & Mariam', genre = 'World Musi...]
+[2025-04-15T13:17:38.157+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:17:41.079+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Os Mutantes",
+  "genre": "Tropicália",
+  "description": "This track likely contains a blend of Brazilian music with psychedelic rock elements, making it useful for sampling unique rhythms, vocal styles, and instrumental sections that are characteristic of the Tropicália movement.",
+  "decade": "1960s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:17:41.083+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Os Mutantes', genre = 'Tropicália', d...]
+[2025-04-15T13:17:41.758+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:17:45.262+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Tinariwen",
+  "genre": "World Music",
+  "description": "This video likely contains desert blues with traditional Tuareg music elements, offering rich textures and rhythms ideal for sampling atmospheric guitar riffs or rhythmic patterns.",
+  "decade": "2010s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:17:45.272+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Tinariwen', genre = 'World Music', de...]
+[2025-04-15T13:17:45.892+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:17:49.325+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Manu Dibango",
+  "genre": "Afrobeat",
+  "description": "This video likely contains the original track 'Soul Makossa' by Manu Dibango, which is famous for its catchy saxophone riff and rhythmic groove, making it ideal for sampling. Music producers might find it useful for its instrumental sections and potential for remixing, especially given its influence on disco and funk music.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:17:49.334+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Manu Dibango', genre = 'Afrobeat', de...]
+[2025-04-15T13:17:50.000+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:17:53.383+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Seu Jorge",
+  "genre": "MPB",
+  "description": "The video likely features a track by Seu Jorge, known for his blend of samba, MPB, and soul. It may contain rich vocal lines, rhythmic guitar patterns, and a laid-back groove, offering potential for sampling melodic hooks or rhythm sections.",
+  "decade": "2010s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:17:53.393+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Seu Jorge', genre = 'MPB', descriptio...]
+[2025-04-15T13:17:54.133+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:17:57.450+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Baaba Maal",
+  "genre": "World Music",
+  "description": "The video likely features traditional Senegalese music with rich textures and rhythms. Baaba Maal is known for his unique voice and the incorporation of traditional African instruments, which can be excellent for sampling unique vocal lines or instrumental sections.",
+  "decade": "1990s",
+  "sample_type": "isolated vocals"
+}
+```
+[2025-04-15T13:17:57.455+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Baaba Maal', genre = 'World Music', d...]
+[2025-04-15T13:17:58.090+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:01.699+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Los Ángeles Azules, Alejandro Fernández",
+  "genre": "Cumbia",
+  "description": "This video likely features a modern take on classic cumbia music, which can offer a rich blend of traditional and contemporary sounds. Music producers can find sampling potential in its rhythmic percussion, melodic instrumental sections, and possibly isolated vocal lines.",
+  "decade": "2020s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:18:01.703+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Los Ángeles Azules, Alejandro Fernánd...]
+[2025-04-15T13:18:02.279+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:06.808+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Toumani Diabaté & Sidiki Diabaté",
+  "genre": "World Music",
+  "description": "This video likely contains a traditional or contemporary interpretation of a piece featuring the kora, an instrument associated with West African music. It can provide rich instrumental sections suitable for sampling, especially for producers looking to incorporate authentic African sounds into their music.",
+  "decade": "2010s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:18:06.825+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Toumani Diabaté & Sidiki Diabaté', ge...]
+[2025-04-15T13:18:07.310+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:11.407+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Béla Fleck",
+  "genre": "Bluegrass",
+  "description": "The video likely contains a live performance of Béla Fleck, a renowned banjo player known for his innovative use of the instrument within the bluegrass genre. This performance may offer rich instrumental sections and intricate banjo solos that could be useful for sampling, especially for producers looking for unique string sounds or live performance energy.",
+  "decade": "2020s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:18:11.415+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Béla Fleck', genre = 'Bluegrass', des...]
+[2025-04-15T13:18:12.003+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:15.154+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Kodo",
+  "genre": "World Music",
+  "description": "This video likely contains a live performance by Japanese drummers playing Taiko drums, which can be highly useful for sampling rhythmic patterns and isolated percussion sounds due to the distinct and powerful nature of Taiko drumming.",
+  "decade": "2010s",
+  "sample_type": "isolated percussion"
+}
+```
+[2025-04-15T13:18:15.158+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Kodo', genre = 'World Music', descrip...]
+[2025-04-15T13:18:15.977+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:20.149+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Yo-Yo Ma",
+  "genre": "Classical",
+  "description": "This video likely contains a performance of Johann Sebastian Bach's Cello Suite No. 1 in G Major, Prélude, performed by the renowned cellist Yo-Yo Ma. It is a solo cello piece, offering rich, melodic lines and a deep emotional resonance, making it useful for sampling lush instrumental sections or creating a classical ambiance in a new composition.",
+  "decade": "1700s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:18:20.155+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Yo-Yo Ma', genre = 'Classical', descr...]
+[2025-04-15T13:18:20.908+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:24.371+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "The Gloaming",
+  "genre": "Folk",
+  "description": "The video likely contains a performance or recording by The Gloaming, known for their contemporary take on traditional Irish folk music. This could provide rich instrumental sections and melodic phrases suitable for sampling, particularly for producers looking to incorporate traditional elements into new compositions.",
+  "decade": "2010s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:18:24.374+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'The Gloaming', genre = 'Folk', descri...]
+[2025-04-15T13:18:24.844+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:27.980+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Sandro Giacobbe",
+  "genre": "Pop",
+  "description": "The video likely contains a classic pop song with potential for sampling lush instrumental sections or heartfelt vocal lines, typical of romantic ballads from this era.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:18:27.983+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Sandro Giacobbe', genre = 'Pop', desc...]
+[2025-04-15T13:18:28.492+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:31.531+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Selena",
+  "genre": "Pop",
+  "description": "This track likely features melodic vocals and romantic themes, making it suitable for sampling in projects that require emotional and melodic elements. The song may contain instrumental sections that can be isolated for use in new compositions.",
+  "decade": "1990s",
+  "sample_type": "isolated vocals"
+}
+```
+[2025-04-15T13:18:31.543+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Selena', genre = 'Pop', description =...]
+[2025-04-15T13:18:32.358+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:35.692+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Bernard 'Pretty' Purdie",
+  "genre": "Funk",
+  "description": "This video likely features a live performance jam session with Bernard 'Pretty' Purdie, known for his drumming skills. It could provide rich, dynamic drum grooves and rhythms perfect for sampling in genres that appreciate funk and groove elements.",
+  "decade": "1970s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:18:35.696+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Bernard \'Pretty\' Purdie', genre = '...]
+[2025-04-15T13:18:36.123+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:39.762+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Gil Scott-Heron",
+  "genre": "Soul",
+  "description": "The video likely features a soulful track with jazzy elements and socially conscious lyrics typical of Gil Scott-Heron's music. It could offer strong rhythmic elements and smooth melodies useful for sampling, especially for producers looking for soulful or spoken word segments.",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:18:39.767+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Gil Scott-Heron', genre = 'Soul', des...]
+[2025-04-15T13:18:40.219+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:43.617+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Lonnie Liston Smith",
+  "genre": "Jazz",
+  "description": "This track likely contains rich, atmospheric jazz elements with a fusion of funk and soul, making it ideal for sampling lush instrumental sections or intros. It may feature smooth keyboards and possibly some percussion that can be isolated for sampling.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:18:43.630+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Lonnie Liston Smith', genre = 'Jazz',...]
+[2025-04-15T13:18:44.022+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:47.939+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Amazing Rhythm Aces",
+  "genre": "Rock",
+  "description": "This song likely features a blend of country rock and soft rock elements, which can provide rich instrumental sections and potential vocal harmonies for sampling. The remastered quality ensures clean audio for sampling.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:18:47.943+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Amazing Rhythm Aces', genre = 'Rock',...]
+[2025-04-15T13:18:48.447+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:52.818+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Dave Grusin & Lee Ritenour",
+  "genre": "Jazz",
+  "description": "This video likely contains a live jazz performance featuring intricate musical compositions and skilled instrumental solos, ideal for sampling smooth instrumental sections or live performance elements.",
+  "decade": "1980s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:18:52.842+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Dave Grusin & Lee Ritenour', genre = ...]
+[2025-04-15T13:18:53.387+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:18:56.943+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Marva Whitney",
+  "genre": "Funk",
+  "description": "This video likely features a vibrant live performance of Marva Whitney with the J.B.'s, showcasing energetic funk rhythms and powerful vocals. This could be useful for sampling due to its lively instrumental sections and dynamic vocal performances, ideal for producers looking to capture the essence of classic funk.",
+  "decade": "1960s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:18:56.950+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Marva Whitney', genre = 'Funk', descr...]
+[2025-04-15T13:18:57.392+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:01.089+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Bob Marley",
+  "genre": "Reggae",
+  "description": "This video likely contains the official music video for 'Is This Love' by Bob Marley, a reggae classic. It is useful for sampling due to its iconic rhythm, melody, and vocals. The track features strong instrumental sections and a memorable chorus that could be sampled for its warm and uplifting vibe.",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:19:01.095+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Bob Marley', genre = 'Reggae', descri...]
+[2025-04-15T13:19:01.607+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:06.025+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Erykah Badu",
+  "genre": "Neo Soul",
+  "description": "This video likely contains a remix of Erykah Badu's song 'On & On', which could offer a unique interpretation of the original track with altered beats or additional elements, providing interesting textures and rhythms for sampling, especially for producers looking to incorporate soulful and experimental sounds.",
+  "decade": "1990s",
+  "sample_type": "remix"
+}
+```
+[2025-04-15T13:19:06.029+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Erykah Badu', genre = 'Neo Soul', des...]
+[2025-04-15T13:19:06.489+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:10.724+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Miriam Makeba",
+  "genre": "World Music",
+  "description": "This video likely contains a live performance of 'Pata Pata,' showcasing Miriam Makeba's vibrant vocals and rhythmic elements characteristic of South African music. The live setting may provide unique vocal inflections and audience interactions, making it useful for sampling lively crowd sounds, energetic vocal lines, or live instrumental sections.",
+  "decade": "1960s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:19:10.728+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Miriam Makeba', genre = 'World Music'...]
+[2025-04-15T13:19:11.276+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:14.716+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Seun Kuti & Egypt 80",
+  "genre": "Afrobeat",
+  "description": "This video likely features a live performance of Seun Kuti & Egypt 80 at Coachella, showcasing energetic Afrobeat rhythms and powerful horn sections. It could be useful for sampling live performance elements, complex instrumental sections, and vibrant brass and percussion parts.",
+  "decade": "2020s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:19:14.719+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Seun Kuti & Egypt 80', genre = 'Afrob...]
+[2025-04-15T13:19:15.303+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:19.376+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Toots and the Maytals",
+  "genre": "Reggae",
+  "description": "The video likely contains a classic reggae track by Toots and the Maytals, featuring upbeat rhythms and catchy melodies that are characteristic of reggae music. This track could be particularly useful for sampling its instrumental sections or the distinctive vocal stylings of Toots Hibbert, offering a rich source of authentic reggae sounds.",
+  "decade": "1960s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:19:19.380+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Toots and the Maytals', genre = 'Regg...]
+[2025-04-15T13:19:19.817+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:23.210+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Angelique Kidjo",
+  "genre": "World Music",
+  "description": "The video likely contains vibrant African rhythms and melodies that can be used for creating unique world music-inspired tracks. It may have sections with strong percussion, dynamic vocals, and engaging instrumental breaks that are ideal for sampling.",
+  "decade": "1990s",
+  "sample_type": "isolated vocals"
+}
+```
+[2025-04-15T13:19:23.220+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Angelique Kidjo', genre = 'World Musi...]
+[2025-04-15T13:19:23.708+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:27.623+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Les Nubians",
+  "genre": "Neo Soul",
+  "description": "The video likely contains a smooth blend of soulful melodies and rhythmic elements, characteristic of Neo Soul, which can be useful for sampling due to its rich harmonic content and unique vocal textures.",
+  "decade": "1990s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:19:27.628+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Les Nubians', genre = 'Neo Soul', des...]
+[2025-04-15T13:19:28.076+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:31.285+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Sizzla Kalonji",
+  "genre": "Reggae",
+  "description": "This track is likely to contain elements typical of reggae music, such as a steady rhythm, melodic basslines, and possibly horns or keyboard riffs. It may be useful for sampling due to its rhythmic elements and lyrical themes.",
+  "decade": "2000s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:19:31.287+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Sizzla Kalonji', genre = 'Reggae', de...]
+[2025-04-15T13:19:31.817+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:35.320+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Willie Bobo",
+  "genre": "Latin Jazz",
+  "description": "This track likely features a blend of jazz and Latin rhythms, making it ideal for sampling due to its vibrant percussion sections and potential instrumental solos. The groove and rhythm could provide a rich backdrop or a dynamic element to a new production.",
+  "decade": "1960s",
+  "sample_type": "isolated percussion"
+}
+```
+[2025-04-15T13:19:35.323+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Willie Bobo', genre = 'Latin Jazz', d...]
+[2025-04-15T13:19:35.773+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:38.999+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Los Ángeles Negros",
+  "genre": "Bolero",
+  "description": "The video likely features a live performance of 'Murió La Flor' by Los Ángeles Negros. This track, known for its emotional vocal delivery and rich instrumental arrangement, offers potential for sampling soulful vocal lines and instrumental sections, especially for producers looking to incorporate elements of classic Latin ballads into their music.",
+  "decade": "1970s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:19:39.002+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Los Ángeles Negros', genre = 'Bolero'...]
+[2025-04-15T13:19:39.823+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:43.588+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Pucho & His Latin Soul Brothers",
+  "genre": "Latin Jazz",
+  "description": "This video likely contains vibrant Latin jazz music with a mix of jazz, soul, and Latin rhythms. It could be useful for sampling instrumental sections, especially for its rich percussion and brass elements that are characteristic of Latin jazz.",
+  "decade": "1960s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:19:43.592+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Pucho & His Latin Soul Brothers', gen...]
+[2025-04-15T13:19:44.273+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:47.552+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Tania Maria",
+  "genre": "Latin Jazz",
+  "description": "This track likely features vibrant piano melodies, energetic rhythms, and strong vocal performances typical of Tania Maria's style. It has potential for sampling instrumental sections and unique vocal phrases, which can be used to add a lively, Latin-infused jazz element to new compositions.",
+  "decade": "1980s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:19:47.555+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Tania Maria', genre = 'Latin Jazz', d...]
+[2025-04-15T13:19:48.061+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:51.242+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Eddie Palmieri",
+  "genre": "Salsa",
+  "description": "This track likely contains vibrant salsa rhythms, complex piano montunos, and dynamic brass sections, offering rich sampling potential for percussion loops, instrumental breaks, and energetic grooves.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:19:51.247+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Eddie Palmieri', genre = 'Salsa', des...]
+[2025-04-15T13:19:51.755+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:19:56.783+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Sly & The Family Stone",
+  "genre": "Funk",
+  "description": "This track is a classic example of funk music with a strong, groovy bassline and rhythmic elements that can be effectively used for sampling. The song's energetic vibes and distinctive instrumental sections make it ideal for producers looking to incorporate vintage funk into their music. It's particularly useful for creating loops or adding a retro feel to modern tracks.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:19:56.787+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Sly & The Family Stone', genre = 'Fun...]
+[2025-04-15T13:19:57.639+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:20:02.383+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Black Uhuru",
+  "genre": "Reggae",
+  "description": "This video likely contains a reggae track with a rhythmic and melodic structure typical of the genre. The track could be useful for sampling due to its characteristic reggae beats, basslines, and possibly distinct vocal lines, offering a rich source for isolated percussion, instrumental sections, or unique vocal phrases.",
+  "decade": "1980s",
+  "sample_type": "full track"
+}
+```
+[2025-04-15T13:20:02.386+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Black Uhuru', genre = 'Reggae', descr...]
+[2025-04-15T13:20:02.974+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:20:07.215+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Tito Puente",
+  "genre": "Latin Jazz",
+  "description": "The video likely contains vibrant Latin jazz rhythms with a focus on percussion and brass instruments. This track is excellent for sampling due to its energetic percussion and melodic brass sections, which can be used in various genres to add a Latin flair. The iconic melody and rhythm make it suitable for remixing or extracting specific instrumental sections.",
+  "decade": "1960s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:20:07.220+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Tito Puente', genre = 'Latin Jazz', d...]
+[2025-04-15T13:20:07.710+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:20:10.436+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Ray Barretto",
+  "genre": "Salsa",
+  "description": "The video likely features a classic salsa track by Ray Barretto, known for his energetic percussion and vibrant brass sections. This could be useful for sampling lively percussion patterns or horn riffs.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:20:10.440+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Ray Barretto', genre = 'Salsa', descr...]
+[2025-04-15T13:20:10.862+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:20:14.392+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Mongo Santamaría",
+  "genre": "Latin Jazz",
+  "description": "This video likely contains a vibrant and rhythmic Latin Jazz track featuring Afro-Cuban percussion and brass instruments. It is highly useful for sampling due to its energetic percussion sections and potential instrumental solos, which can add a lively and exotic flair to new productions.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:20:14.395+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Mongo Santamaría', genre = 'Latin Jaz...]
+[2025-04-15T13:20:14.969+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:20:22.698+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Cal Tjader",
+  "genre": "Latin Jazz",
+  "description": "The video likely contains a performance or recording of Cal Tjader's piece 'Morning' from the album 'Here and Now.' Known for his vibraphone work, Tjader's music offers rich instrumental sections ideal for sampling. A music producer could extract smooth and rhythmic instrumental sections, including vibraphone solos or Latin-influenced percussion.",
+  "decade": "1960s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:20:22.705+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Cal Tjader', genre = 'Latin Jazz', de...]
+[2025-04-15T13:20:23.184+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:20:25.862+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Aniceto Molina",
+  "genre": "Cumbia",
+  "description": "This video likely contains a classic cumbia track with rich instrumental sections and distinctive rhythms, making it useful for sampling lively percussion and instrumental breaks.",
+  "decade": "1980s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-15T13:20:25.865+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Aniceto Molina', genre = 'Cumbia', de...]
+[2025-04-15T13:20:26.343+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:20:30.550+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Grupo Folklorico Y Experimental Nuevayorquino",
+  "genre": "World Music",
+  "description": "This video likely contains a live performance or recording of traditional and experimental music with rich cultural influences, offering unique rhythms and melodies that are suitable for sampling. It could provide interesting instrumental sections and live performance elements that are valuable for creating new tracks.",
+  "decade": "1970s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-15T13:20:30.554+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Grupo Folklorico Y Experimental Nueva...]
+[2025-04-15T13:20:30.983+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:20:32.489+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-15T13:20:32.580+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:20:32.582+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-15T13:20:32.583+0000] {connection.py:718} INFO - closed
+[2025-04-15T13:20:32.624+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-15T13:20:32.738+0000] {logging_mixin.py:188} INFO - ✅ Enriched 45 rows in Snowflake.
+[2025-04-15T13:20:32.740+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-15T13:20:32.795+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=enrich_staging_rows, task_id=run_enrich_staging_rows, execution_date=20250415T131432, start_date=20250415T131718, end_date=20250415T132032
+[2025-04-15T13:20:32.862+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-15T13:20:32.901+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

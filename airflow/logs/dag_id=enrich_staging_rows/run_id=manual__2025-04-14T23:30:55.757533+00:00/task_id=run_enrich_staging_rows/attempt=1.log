@@ -1,0 +1,466 @@
+[2025-04-14T23:30:59.517+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-14T23:30:55.757533+00:00 [queued]>
+[2025-04-14T23:30:59.525+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-14T23:30:55.757533+00:00 [queued]>
+[2025-04-14T23:30:59.525+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-14T23:30:59.535+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_enrich_staging_rows> on 2025-04-14 23:30:55.757533+00:00
+[2025-04-14T23:30:59.544+0000] {standard_task_runner.py:60} INFO - Started process 6275 to run task
+[2025-04-14T23:30:59.547+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enrich_staging_rows', 'run_enrich_staging_rows', 'manual__2025-04-14T23:30:55.757533+00:00', '--job-id', '223', '--raw', '--subdir', 'DAGS_FOLDER/enrich_staging_rows_dag.py', '--cfg-path', '/tmp/tmpsburtf8m']
+[2025-04-14T23:30:59.548+0000] {standard_task_runner.py:88} INFO - Job 223: Subtask run_enrich_staging_rows
+[2025-04-14T23:30:59.586+0000] {task_command.py:423} INFO - Running <TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-14T23:30:55.757533+00:00 [running]> on host d8146153ddc3
+[2025-04-14T23:30:59.627+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enrich_staging_rows' AIRFLOW_CTX_TASK_ID='run_enrich_staging_rows' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T23:30:55.757533+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-14T23:30:55.757533+00:00'
+[2025-04-14T23:30:59.628+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-14T23:30:59.628+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-14T23:31:00.076+0000] {cursor.py:1028} INFO - query: [SELECT * FROM SAMPLED_SONGS_STAGING WHERE artist IS NULL OR genre IS NULL]
+[2025-04-14T23:31:00.512+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T23:31:00.515+0000] {cursor.py:1205} INFO - Number of results in first chunk: 45
+[2025-04-14T23:31:02.202+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:02.204+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Mongo Santamaria",
+  "genre": "Latin Jazz",
+  "description": "Mongo Santamaria was a Cuban percussionist and bandleader known for his influential contributions to Latin jazz, particularly through his mastery of the conga. 'Sofrito' is one of his notable tracks, showcasing a fusion of Afro-Cuban rhythms and jazz elements.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:06.013+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:06.019+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Fela Kuti",
+  "genre": "Afrobeat",
+  "description": "Fela Kuti was a Nigerian multi-instrumentalist and pioneer of the Afrobeat music genre, known for blending traditional African music with jazz and funk influences. 'Water No Get Enemy' is one of his most celebrated tracks, featuring powerful social and political messages.",
+  "decade": "1970s",
+  "sample_type": "full track"
+}
+```
+[2025-04-14T23:31:08.255+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:08.258+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Ali Farka Touré & Toumani Diabaté",
+  "genre": "World Music/Blues",
+  "description": "Ali Farka Touré and Toumani Diabaté are renowned Malian musicians known for blending traditional African music with blues influences. Their live performances showcase a rich tapestry of guitar and kora interplay.",
+  "decade": "1990s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:10.049+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:10.050+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Amadou & Mariam",
+  "genre": "World Music",
+  "description": "Amadou & Mariam are a musical duo from Mali, known for their unique blend of traditional Mali music and various global influences. 'Je pense à toi' is one of their popular songs that showcases their melodic and rhythmic style.",
+  "decade": "2000s",
+  "sample_type": "full song"
+}
+```
+[2025-04-14T23:31:11.765+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:11.768+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Os Mutantes",
+  "genre": "Tropicália",
+  "description": "A Minha Menina is a song by the Brazilian band Os Mutantes, known for its eclectic mix of psychedelic rock and traditional Brazilian music elements. The song is a staple of the Tropicália movement.",
+  "decade": "1960s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:13.195+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:13.196+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Tinariwen",
+  "genre": "Desert Blues",
+  "description": "Tinariwen is a Grammy-winning band from the Sahara Desert region of northern Mali, known for their unique blend of traditional Tuareg music and electric blues. Their music often addresses themes of exile, longing, and political struggle.",
+  "decade": "2000s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:14.560+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:14.561+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Manu Dibango",
+  "genre": "Afrobeat",
+  "description": "Soul Makossa is a pioneering Afrobeat track by Cameroonian musician Manu Dibango. The song is renowned for its infectious saxophone riff and rhythmic grooves.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:16.035+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:16.037+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Seu Jorge",
+  "genre": "MPB (Música Popular Brasileira)",
+  "description": "\"Amiga da Minha Mulher\" is a popular song by Brazilian singer-songwriter Seu Jorge, known for its catchy rhythm and humorous lyrics about romantic dilemmas.",
+  "decade": "2010s",
+  "sample_type": "full song"
+}
+```
+[2025-04-14T23:31:17.882+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:17.887+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Baaba Maal",
+  "genre": "World Music",
+  "description": "Baaba Maal is a renowned Senegalese singer and guitarist known for his fusion of traditional African music with contemporary sounds.",
+  "decade": "1990s",
+  "sample_type": "vocals"
+}
+```
+[2025-04-14T23:31:20.386+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:20.388+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Los Ángeles Azules, Alejandro Fernández",
+  "genre": "Cumbia",
+  "description": "A collaboration between Los Ángeles Azules and Alejandro Fernández, 'La Cumbia Triste' is a vibrant cumbia track characterized by its rhythmic beats and emotional lyrics.",
+  "decade": "1990s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:22.650+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:22.671+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Toumani Diabaté & Sidiki Diabaté",
+  "genre": "World Music",
+  "description": "Toumani Diabaté and Sidiki Diabaté are renowned kora players from Mali, known for their intricate and soulful performances. 'Jarabi' is a traditional piece that beautifully showcases the rich musical heritage of West Africa.",
+  "decade": "1990s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:25.779+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:25.781+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Béla Fleck",
+  "genre": "Bluegrass",
+  "description": "Béla Fleck is a renowned banjo player known for his innovative approach to bluegrass and fusion music. 'Wheels Up (Live)' showcases his exceptional skill and the dynamic energy of a live performance.",
+  "decade": "1990s",
+  "sample_type": "Live performance"
+}
+```
+[2025-04-14T23:31:27.500+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:27.502+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Kodo",
+  "genre": "World Music",
+  "description": "Kodo is a renowned Japanese taiko drumming group known for their powerful and energetic performances featuring traditional Japanese drums, or taiko.",
+  "decade": "1980s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:29.950+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:29.954+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Yo-Yo Ma",
+  "genre": "Classical",
+  "description": "This video features Yo-Yo Ma performing the Prelude from Bach's Cello Suite No. 1 in G Major. It showcases the intricate and expressive cello work that is characteristic of Baroque music.",
+  "decade": "1720s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:33.452+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:33.458+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "The Gloaming",
+  "genre": "Folk",
+  "description": "The Gloaming is an Irish-American band known for their contemporary take on traditional Irish music, blending classical and folk elements.",
+  "decade": "2010s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:35.244+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:35.245+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Sandro Giacobbe",
+  "genre": "Pop",
+  "description": "Sandro Giacobbe is an Italian singer-songwriter known for his romantic ballads and melodic tunes. 'Tu mi cielo y mi alma' is likely one of his emotive songs that capture themes of love and sentiment.",
+  "decade": "1970s",
+  "sample_type": "Full song"
+}
+```
+[2025-04-14T23:31:36.949+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:36.952+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Selena",
+  "genre": "Tejano/Pop",
+  "description": "A romantic song by Selena that expresses longing and deep affection for a loved one, capturing the essence of 90s Latin pop music.",
+  "decade": "1990s",
+  "sample_type": "isolated vocals"
+}
+```
+[2025-04-14T23:31:38.144+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:38.144+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Bernard 'Pretty' Purdie",
+  "genre": "Funk",
+  "description": "A lively and rhythmic jam session showcasing Bernard 'Pretty' Purdie's renowned drumming style, characterized by intricate grooves and a deep sense of funk.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:39.785+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:39.790+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Gil Scott-Heron",
+  "genre": "Soul/Jazz",
+  "description": "The song 'The Bottle' by Gil Scott-Heron is a socially conscious track that highlights issues of alcoholism and its impacts on communities. It blends elements of jazz and soul with poignant lyrics and a memorable groove.",
+  "decade": "1970s",
+  "sample_type": "Full track"
+}
+```
+[2025-04-14T23:31:41.653+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:41.655+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Lonnie Liston Smith",
+  "genre": "Jazz/Funk",
+  "description": "Lonnie Liston Smith is known for his fusion of jazz, funk, and soul, creating a unique and expansive sound. 'Expansions' is one of his most popular tracks, celebrated for its uplifting and cosmic vibe.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:43.293+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:43.296+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Amazing Rhythm Aces",
+  "genre": "Country Rock",
+  "description": "This song blends elements of country and rock, characterized by its laid-back melody and storytelling lyrics typical of the genre.",
+  "decade": "1970s",
+  "sample_type": "Full track"
+}
+```
+[2025-04-14T23:31:48.140+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:48.147+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Dave Grusin & Lee Ritenour",
+  "genre": "Jazz Fusion",
+  "description": "Dave Grusin and Lee Ritenour collaborate in this live performance of 'Mountain Dance', showcasing their expertise in jazz fusion with intricate melodies and dynamic rhythms.",
+  "decade": "1980s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:31:49.870+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:49.875+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Marva Whitney & the J.B.'S",
+  "genre": "Funk/Soul",
+  "description": "This is a rare live TV performance from 1969 featuring Marva Whitney and the J.B.'S, showcasing their dynamic funk sound and energetic stage presence.",
+  "decade": "1960s",
+  "sample_type": "Live performance"
+}
+```
+[2025-04-14T23:31:51.356+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:51.359+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Bob Marley",
+  "genre": "Reggae",
+  "description": "A classic reggae love song by Bob Marley, expressing devotion and warmth. The official music video complements the song's themes of love and unity.",
+  "decade": "1970s",
+  "sample_type": "Full song"
+}
+```
+[2025-04-14T23:31:53.185+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:53.187+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Erykah Badu",
+  "genre": "Neo Soul",
+  "description": "This is a remix edit of Erykah Badu's song 'On & On', which showcases her distinctive soulful voice and blend of R&B and jazz influences.",
+  "decade": "1990s",
+  "sample_type": "Remix"
+}
+```
+[2025-04-14T23:31:56.472+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:56.475+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Miriam Makeba",
+  "genre": "World Music",
+  "description": "Miriam Makeba, also known as 'Mama Africa,' was a South African singer and civil rights activist. 'Pata Pata' is one of her most famous songs, characterized by its upbeat rhythm and catchy melody.",
+  "decade": "1960s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-14T23:31:57.931+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:57.932+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Seun Kuti & Egypt 80",
+  "genre": "Afrobeat",
+  "description": "Seun Kuti, the son of legendary musician Fela Kuti, leads the band Egypt 80 in a vibrant performance at Coachella 2025, showcasing the energetic and politically charged Afrobeat sound.",
+  "decade": "1970s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-14T23:31:59.751+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:31:59.753+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Toots and the Maytals",
+  "genre": "Reggae",
+  "description": "\"54-46 Was My Number\" is a classic reggae song by Toots and the Maytals, known for its upbeat rhythm and catchy melody. The song reflects the struggles and resilience of the artist during a period of incarceration.",
+  "decade": "1960s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:32:02.524+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:02.526+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Angelique Kidjo",
+  "genre": "World Music",
+  "description": "Angelique Kidjo is a renowned Beninese singer-songwriter known for her diverse musical influences, blending traditional African music with elements of Afropop, dance, and jazz.",
+  "decade": "1990s",
+  "sample_type": "Full song"
+}
+```
+[2025-04-14T23:32:04.552+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:04.553+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Les Nubians",
+  "genre": "Afro-soul",
+  "description": "Les Nubians are a French musical duo known for their smooth blend of R&B, soul, and African influences. 'Makeda' is one of their popular tracks, celebrated for its rich vocals and vibrant production.",
+  "decade": "1990s",
+  "sample_type": "full song"
+}
+```
+[2025-04-14T23:32:06.324+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:06.325+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Sizzla Kalonji",
+  "genre": "Reggae",
+  "description": "Solid As A Rock is a powerful reggae anthem by Sizzla Kalonji, emphasizing resilience and strength in the face of adversity. Known for its uplifting message and energetic rhythm, the track showcases Sizzla's unique vocal style.",
+  "decade": "2000s",
+  "sample_type": "official audio"
+}
+```
+[2025-04-14T23:32:08.160+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:08.161+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Willie Bobo",
+  "genre": "Latin Jazz",
+  "description": "Willie Bobo was a prominent Latin jazz percussionist known for his dynamic rhythms and fusion of jazz with Latin influences. 'Fried Neckbones and Some Home Fries' showcases his signature style that blends catchy melodies with vibrant percussion.",
+  "decade": "1960s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:32:11.334+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:11.336+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Los Ángeles Negros",
+  "genre": "Latin Soul/Bolero",
+  "description": "Los Ángeles Negros are a Chilean band known for their romantic ballads and soul-infused Latin music. 'Murió La Flor' is one of their iconic songs, often performed live to captivate audiences with its heartfelt lyrics.",
+  "decade": "1970s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-14T23:32:13.553+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:13.556+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Pucho & His Latin Soul Brothers",
+  "genre": "Latin Jazz/Soul",
+  "description": "Pucho & His Latin Soul Brothers are known for their vibrant fusion of Latin jazz and soul music, combining infectious rhythms with soulful melodies.",
+  "decade": "1960s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:32:16.187+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:16.188+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Tania Maria",
+  "genre": "Latin Jazz",
+  "description": "Tania Maria, a Brazilian artist, is known for her energetic and vibrant fusion of jazz with Latin rhythms. 'Come With Me' showcases her distinctive style, blending lively piano, captivating vocals, and rhythmic percussion.",
+  "decade": "1980s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:32:20.914+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:20.916+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Eddie Palmieri",
+  "genre": "Salsa",
+  "description": "Eddie Palmieri is a renowned Latin jazz pianist and bandleader known for his innovative fusion of jazz and Latin rhythms. 'Vámonos pa'l Monte' is one of his classic tracks that showcases his dynamic style and musical prowess.",
+  "decade": "1970s",
+  "sample_type": "Official Audio"
+}
+```
+[2025-04-14T23:32:22.820+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:22.820+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Sly & The Family Stone",
+  "genre": "Funk/Soul",
+  "description": "Sly & The Family Stone were pioneers of the funk and soul genres, known for their innovative sound and socially conscious lyrics. 'Thank You (Falettinme Be Mice Elf Agin)' is one of their most iconic tracks, celebrated for its groovy bassline and energetic vibe.",
+  "decade": "1970s",
+  "sample_type": "HQ Audio"
+}
+```
+[2025-04-14T23:32:26.183+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:26.187+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Black Uhuru",
+  "genre": "Reggae",
+  "description": "Black Uhuru is a Jamaican reggae group known for their distinct sound and contribution to the genre. 'Guess Who's Coming to Dinner' is one of their popular tracks, featuring themes of social and political consciousness.",
+  "decade": "1970s",
+  "sample_type": "full song"
+}
+```
+[2025-04-14T23:32:28.094+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:28.096+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Tito Puente",
+  "genre": "Latin Jazz",
+  "description": "Oye Como Va is a classic Latin jazz piece by Tito Puente that features vibrant rhythms and rich instrumentation. It became widely popular after being covered by Santana.",
+  "decade": "1960s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:32:29.244+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:29.245+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Ray Barretto",
+  "genre": "Salsa",
+  "description": "Ray Barretto was a renowned percussionist and bandleader known for his contributions to Latin jazz and salsa music. 'Indestructible' is a classic track that showcases his energetic and rhythmic style.",
+  "decade": "1970s",
+  "sample_type": "Full track"
+}
+```
+[2025-04-14T23:32:30.977+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:30.978+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Mongo Santamaría",
+  "genre": "Latin Jazz",
+  "description": "Mongo Santamaría was a Cuban percussionist and bandleader known for his influential work in Latin jazz. His 1973 track 'Sofrito' is a vibrant blend of Afro-Cuban rhythms and jazz elements.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:32:32.874+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:32.875+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Cal Tjader",
+  "genre": "Jazz/Latin Jazz",
+  "description": "Cal Tjader was a prominent American jazz musician known for his contributions to Latin jazz and his exceptional skills on the vibraphone. 'Morning' is likely a track from his album 'Here and Now'.",
+  "decade": "1960s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:32:36.183+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:36.185+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Aniceto Molina",
+  "genre": "Cumbia",
+  "description": "Aniceto Molina was a Colombian cumbia musician known for his lively and rhythmic music, which combines traditional Colombian sounds with modern influences. 'El Machito' is one of his popular tracks, celebrated for its catchy melody and danceable beat.",
+  "decade": "1980s",
+  "sample_type": "song"
+}
+```
+[2025-04-14T23:32:38.157+0000] {logging_mixin.py:188} INFO - ⚠️ Failed to parse LLM response: Expecting value: line 1 column 1 (char 0)
+[2025-04-14T23:32:38.157+0000] {logging_mixin.py:188} INFO - Response content: ```json
+{
+  "artist": "Grupo Folklorico y Experimental Nuevayorquino",
+  "genre": "Latin Jazz/Folk",
+  "description": "Grupo Folklorico y Experimental Nuevayorquino is known for blending traditional Latin American folk music with jazz influences, creating a unique sound that reflects the cultural diversity of New York.",
+  "decade": "1970s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-14T23:32:38.158+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Love and Death', genre = 'Nu Metal', ...]
+[2025-04-14T23:32:38.699+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T23:32:38.700+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-14T23:32:38.746+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-14T23:32:38.746+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-14T23:32:38.746+0000] {connection.py:718} INFO - closed
+[2025-04-14T23:32:38.803+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-14T23:32:38.902+0000] {logging_mixin.py:188} INFO - ✅ Enriched 1 rows in Snowflake.
+[2025-04-14T23:32:38.903+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-14T23:32:38.934+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=enrich_staging_rows, task_id=run_enrich_staging_rows, execution_date=20250414T233055, start_date=20250414T233059, end_date=20250414T233238
+[2025-04-14T23:32:38.994+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-14T23:32:39.020+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

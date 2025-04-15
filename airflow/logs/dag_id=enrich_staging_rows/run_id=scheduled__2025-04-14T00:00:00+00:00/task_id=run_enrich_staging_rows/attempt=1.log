@@ -1,0 +1,19 @@
+[2025-04-15T00:00:02.117+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows scheduled__2025-04-14T00:00:00+00:00 [queued]>
+[2025-04-15T00:00:02.130+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows scheduled__2025-04-14T00:00:00+00:00 [queued]>
+[2025-04-15T00:00:02.130+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-15T00:00:02.138+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_enrich_staging_rows> on 2025-04-14 00:00:00+00:00
+[2025-04-15T00:00:02.149+0000] {standard_task_runner.py:60} INFO - Started process 6726 to run task
+[2025-04-15T00:00:02.153+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enrich_staging_rows', 'run_enrich_staging_rows', 'scheduled__2025-04-14T00:00:00+00:00', '--job-id', '225', '--raw', '--subdir', 'DAGS_FOLDER/enrich_staging_rows_dag.py', '--cfg-path', '/tmp/tmp_azdzuhy']
+[2025-04-15T00:00:02.156+0000] {standard_task_runner.py:88} INFO - Job 225: Subtask run_enrich_staging_rows
+[2025-04-15T00:00:02.225+0000] {task_command.py:423} INFO - Running <TaskInstance: enrich_staging_rows.run_enrich_staging_rows scheduled__2025-04-14T00:00:00+00:00 [running]> on host d8146153ddc3
+[2025-04-15T00:00:02.315+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enrich_staging_rows' AIRFLOW_CTX_TASK_ID='run_enrich_staging_rows' AIRFLOW_CTX_EXECUTION_DATE='2025-04-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-14T00:00:00+00:00'
+[2025-04-15T00:00:02.318+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-15T00:00:02.321+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-15T00:00:02.820+0000] {cursor.py:1028} INFO - query: [SELECT * FROM SAMPLED_SONGS_STAGING WHERE artist IS NULL OR genre IS NULL]
+[2025-04-15T00:00:03.049+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T00:00:03.049+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-15T00:00:03.058+0000] {logging_mixin.py:188} INFO - ✅ No rows to enrich.
+[2025-04-15T00:00:03.058+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-15T00:00:03.067+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=enrich_staging_rows, task_id=run_enrich_staging_rows, execution_date=20250414T000000, start_date=20250415T000002, end_date=20250415T000003
+[2025-04-15T00:00:03.091+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-15T00:00:03.112+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

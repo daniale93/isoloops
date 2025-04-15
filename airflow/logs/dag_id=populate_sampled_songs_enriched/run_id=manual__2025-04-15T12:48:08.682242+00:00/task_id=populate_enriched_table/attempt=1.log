@@ -1,0 +1,119 @@
+[2025-04-15T12:48:11.092+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: populate_sampled_songs_enriched.populate_enriched_table manual__2025-04-15T12:48:08.682242+00:00 [queued]>
+[2025-04-15T12:48:11.101+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: populate_sampled_songs_enriched.populate_enriched_table manual__2025-04-15T12:48:08.682242+00:00 [queued]>
+[2025-04-15T12:48:11.102+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-15T12:48:11.112+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): populate_enriched_table> on 2025-04-15 12:48:08.682242+00:00
+[2025-04-15T12:48:11.119+0000] {standard_task_runner.py:60} INFO - Started process 18357 to run task
+[2025-04-15T12:48:11.129+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'populate_sampled_songs_enriched', 'populate_enriched_table', 'manual__2025-04-15T12:48:08.682242+00:00', '--job-id', '227', '--raw', '--subdir', 'DAGS_FOLDER/populate_enriched_table_dag.py', '--cfg-path', '/tmp/tmp5_6tlwby']
+[2025-04-15T12:48:11.138+0000] {standard_task_runner.py:88} INFO - Job 227: Subtask populate_enriched_table
+[2025-04-15T12:48:11.450+0000] {task_command.py:423} INFO - Running <TaskInstance: populate_sampled_songs_enriched.populate_enriched_table manual__2025-04-15T12:48:08.682242+00:00 [running]> on host d8146153ddc3
+[2025-04-15T12:48:11.538+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='populate_sampled_songs_enriched' AIRFLOW_CTX_TASK_ID='populate_enriched_table' AIRFLOW_CTX_EXECUTION_DATE='2025-04-15T12:48:08.682242+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-15T12:48:08.682242+00:00'
+[2025-04-15T12:48:11.540+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-15T12:48:11.542+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-15T12:48:12.105+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS_ENRICHED ( title STRING, youtube_url ST...]
+[2025-04-15T12:48:12.222+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:12.222+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-15T12:48:12.222+0000] {cursor.py:1028} INFO - query: [SELECT * FROM SAMPLED_SONGS_STAGING]
+[2025-04-15T12:48:12.495+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:12.496+0000] {cursor.py:1205} INFO - Number of results in first chunk: 46
+[2025-04-15T12:48:12.528+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:13.317+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:13.319+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:14.048+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:14.051+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:14.652+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:14.653+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:15.276+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:15.278+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:15.990+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:15.992+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:16.568+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:16.572+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:17.089+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:17.091+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:17.840+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:17.845+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:18.459+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:18.473+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:19.029+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:19.031+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:19.662+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:19.664+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:20.289+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:20.290+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:20.817+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:20.818+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:21.439+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:21.442+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:22.051+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:22.054+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:22.574+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:22.588+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:23.152+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:23.157+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:23.692+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:23.697+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:24.188+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:24.191+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:24.722+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:24.728+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:25.281+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:25.283+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:25.848+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:25.851+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:26.366+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:26.368+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:27.052+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:27.054+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:27.948+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:27.957+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:28.830+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:28.833+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:29.364+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:29.365+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:30.198+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:30.201+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:30.943+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:30.966+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:31.476+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:31.477+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:32.333+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:32.336+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:33.104+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:33.105+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:33.990+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:33.995+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:34.684+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:34.687+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:35.282+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:35.285+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:36.042+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:36.043+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:36.775+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:36.780+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:37.295+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:37.296+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:38.127+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:38.129+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:38.977+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:38.978+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:39.679+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:39.683+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:40.387+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:40.388+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:40.979+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:40.982+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:41.592+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:41.593+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:42.091+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:42.093+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_ENRICHED AS target USING (SELECT 'https://www.youtube.c...]
+[2025-04-15T12:48:42.923+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:42.923+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-15T12:48:43.000+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T12:48:43.003+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-15T12:48:43.008+0000] {logging_mixin.py:188} INFO - ✅ Enriched table populated with 46 rows.
+[2025-04-15T12:48:43.011+0000] {connection.py:718} INFO - closed
+[2025-04-15T12:48:43.053+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-15T12:48:43.104+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-15T12:48:43.128+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=populate_sampled_songs_enriched, task_id=populate_enriched_table, execution_date=20250415T124808, start_date=20250415T124811, end_date=20250415T124843
+[2025-04-15T12:48:43.240+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-15T12:48:43.323+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

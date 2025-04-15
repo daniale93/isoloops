@@ -6,16 +6,20 @@ const App = () => {
   const [genreFilter, setGenreFilter] = useState('');
   const [typeFilter, setTypeFilter] = useState('');
   const [surpriseSong, setSurpriseSong] = useState(null);
-  const [songsData, setSongsData] = useState([]); // To store songs data fetched from Snowflake
+  const [songsData, setSongsData] = useState([]);
+  const [promptFilter, setPromptFilter] = useState(null);
+  const [currentPrompt, setCurrentPrompt] = useState(null);
 
-  // Fetch data from the backend API (which queries Snowflake)
-  useEffect(() => {
+  const fetchSongs = (prompt = null) => {
+    const endpoint = prompt
+      ? `https://isoloops-api.vercel.app/api/query.py?prompt_filter=${encodeURIComponent(prompt)}`
+      : `https://isoloops-api.vercel.app/api/query.py`;
+
     axios
-      .get('https://isoloops-api.vercel.app/api/query.py')// Correct API endpoint
+      .get(endpoint)
       .then((response) => {
-        console.log('Fetched data:', response.data);  // Check if data is coming through
         const rawData = response.data.samples || [];
-        
+
         const normalized = rawData.map((sample) => ({
           ...sample,
           TITLE: sample.title,
@@ -28,22 +32,27 @@ const App = () => {
           DECADE: sample.decade,
           START_SECONDS: sample.start_seconds,
           END_SECONDS: sample.end_seconds,
-          DURATION: sample.duration
+          DURATION: sample.duration,
+          CHATGPT_PROMPT: sample.chatgpt_prompt,
         }));
-        
-        console.log("Normalized songs:", normalized);  // Log the normalized data
+
         setSongsData(normalized);
+        if (normalized.length > 0) {
+          setCurrentPrompt(normalized[0].CHATGPT_PROMPT);
+        }
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-  }, []);// Empty dependency array ensures this runs only once on component mount
+  };
 
-  // Extract unique genres and sample types for filtering
+  useEffect(() => {
+    fetchSongs(promptFilter);
+  }, [promptFilter]);
+
   const genres = [...new Set(songsData.map((song) => song.GENRE))];
   const sampleTypes = [...new Set(songsData.map((song) => song.SAMPLE_TYPE))];
 
-  // Filter songs based on genre and sample type
   const filteredSongs = surpriseSong
     ? [surpriseSong]
     : songsData.filter((song) => {
@@ -53,7 +62,6 @@ const App = () => {
         );
       });
 
-  // Tag component for genre and sample type filters
   const Tag = ({ value, label, active, onClick, color }) => {
     const base = 'px-3 py-1 text-sm rounded-full font-medium transition';
     const classMap = {
@@ -85,7 +93,28 @@ const App = () => {
             className="h-10 w-10"
           />
         </div>
-        <p className="text-gray-600 mb-6 italic">Find the cleanest samples in the wild.</p>
+        <p className="text-gray-600 mb-2 italic">Find the cleanest samples in the wild.</p>
+
+        {/* Show prompt */}
+        {currentPrompt && (
+          <div className="mb-4 text-sm text-gray-500">
+            <span className="mr-2 font-semibold">Discovery Prompt:</span>
+            <button
+              className="text-blue-600 underline hover:text-blue-800"
+              onClick={() => setPromptFilter(currentPrompt)}
+            >
+              {currentPrompt}
+            </button>
+            {promptFilter && (
+              <button
+                className="ml-4 text-red-500 underline hover:text-red-700"
+                onClick={() => setPromptFilter(null)}
+              >
+                Clear Prompt Filter
+              </button>
+            )}
+          </div>
+        )}
 
         {/* Surprise Me Button */}
         {!surpriseSong ? (
@@ -158,8 +187,7 @@ const App = () => {
           </>
         )}
 
-        {/* Table */}
-        <SongTable songs={filteredSongs} /> {/* Pass filtered songs to SongTable */}
+        <SongTable songs={filteredSongs} />
       </div>
     </div>
   );

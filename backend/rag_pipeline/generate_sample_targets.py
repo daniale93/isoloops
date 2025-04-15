@@ -21,6 +21,11 @@ PROMPTS = [
     f"Give me a list of {MAX_QUERIES} artists who use traditional instruments in a way that results in clear isolated grooves. List only the names—no extra explanation.",
     f"Give me a list of {MAX_QUERIES} global artists from the 1970s and 1980s whose recordings often isolate drums, vocals, or horns. List only the names—no extra explanation.",
     f"Give me a list of {MAX_QUERIES} musicians from Africa, Latin America, or Southeast Asia whose recordings feature minimal arrangements or clean percussive moments. List only the names—no extra explanation.",
+    f"Give me a list of {MAX_QUERIES} YouTube creators who post isolated instrument recordings—especially percussion, bass, or ethnic instruments—ideal for sampling in Afro, Latin, funk, or world music. List only the names—no extra explanation",
+    f"Give me a list of {MAX_QUERIES} List 10 field recording sessions where street musicians or traditional performers are playing instruments with no background music. Focus on Latin America, West Africa, or Southeast Asia. List only the names—no extra explanation",
+    f"Give me a list of {MAX_QUERIES} videos or creators that showcase traditional or rare instruments (like berimbau, balafon, marimba, handpan, etc.) played solo and in high audio quality. List only the names—no extra explanation",
+    f"Give me a list of {MAX_QUERIES} videos of traditional chants, call-and-response, or ritual music from indigenous or rural communities—especially with isolated vocals or percussion. List only the names—no extra explanation",
+    f"Give me a list of {MAX_QUERIES}  rare or public domain recordings of political speeches, sermons, or interviews that are clean and have unique vocal tone or delivery style, suitable for sampling. List only the names—no extra explanation",
 ]
 
 # Store selected prompt in global var
