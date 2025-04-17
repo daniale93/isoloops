@@ -51,7 +51,7 @@ YouTube URL: {row['YOUTUBE_URL']}
   "genre": "...",  # Choose from: ["Afrobeat", "Latin Jazz", "Funk", "Cumbia", "Salsa", "Reggae", "World Music", "Jazz", "Tropicália", "Blues", "Soul", "MPB", "Highlife", "Folk", "Bolero", "Rock", "Pop", "Classical", "Hip Hop", "Bluegrass", "Electronic", "Neo Soul"]
   "description": "...",  # Describe what kind of sampling potential this has
   "decade": "...",  # Format: 1960s, 1970s, etc.
-  "sample_type": "..."  # Choose from: ["isolated percussion", "isolated vocals", "instrumental section", "live performance", "full track", "intro", "breakdown", "remix"]
+  "sample_type": "..."  # Choose from: ["isolated percussion", "isolated vocals", "instrumental section", "live performance", "full track", "intro", "breakdown", "remix", "spoken word", "other"]
 
 }}
 

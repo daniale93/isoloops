@@ -38,7 +38,7 @@ const App = () => {
 
         setSongsData(normalized);
         if (normalized.length > 0) {
-          setCurrentPrompt(normalized[0].CHATGPT_PROMPT);
+          setCurrentPrompt(normalized[normalized.length - 1].CHATGPT_PROMPT);
         }
       })
       .catch((error) => {
