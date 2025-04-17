@@ -1,8 +1,6 @@
 import os
-import pandas as pd
 import snowflake.connector
 from dotenv import load_dotenv
-import datetime as dt
 
 # Load environment variables
 load_dotenv()
@@ -36,7 +34,6 @@ def populate_enriched_table():
         query_used STRING,
         timestamp_loaded TIMESTAMP_TZ,
         youtube_rank NUMBER,
-        video_duration NUMBER,
         view_count NUMBER,
         like_count NUMBER,
         comment_count NUMBER,
@@ -46,80 +43,100 @@ def populate_enriched_table():
     );
     """)
 
-    # Read from staging table
-    cursor.execute("SELECT * FROM SAMPLED_SONGS_STAGING")
-    columns = [col[0] for col in cursor.description]
-    rows = cursor.fetchall()
-    df = pd.DataFrame(rows, columns=columns)
-
-    if df.empty:
-        print("⚠️ No data in SAMPLED_SONGS_STAGING to enrich.")
-        cursor.close()
-        conn.close()
-        return
-
-    # Drop duplicates based on youtube_url
-    df = df.drop_duplicates(subset=["YOUTUBE_URL"])
-
-    for _, row in df.iterrows():
-        values = [
-            row["YOUTUBE_URL"],
-            row["TITLE"],
-            row.get("START_TIME", ""),
-            row.get("END_TIME", ""),
-            row.get("SAMPLE_TYPE", ""),
-            row.get("DESCRIPTION", ""),
-            row.get("GENRE", ""),
-            row.get("DECADE", ""),
-            row.get("START_SECONDS", 0),
-            row.get("END_SECONDS", 0),
-            row.get("DURATION", 0),
-            row.get("QUERY_USED", ""),
-            str(row.get("TIMESTAMP_LOADED", dt.datetime.now(dt.timezone.utc).isoformat())),
-            row.get("YOUTUBE_RANK", 0),
-            row.get("VIDEO_DURATION", 0),
-            row.get("VIEW_COUNT", 0),
-            row.get("LIKE_COUNT", 0),
-            row.get("COMMENT_COUNT", 0),
-            row.get("RESOLUTION", ""),
-            row.get("ARTIST", ""),
-            row.get("CHATGPT_PROMPT", "")
-        ]
-
-        cursor.execute("""
-            MERGE INTO SAMPLED_SONGS_ENRICHED AS target
-            USING (SELECT %s AS youtube_url) AS source
-            ON target.youtube_url = source.youtube_url
-            WHEN MATCHED THEN UPDATE SET
-                target.title = %s,
-                target.start_time = %s,
-                target.end_time = %s,
-                target.sample_type = %s,
-                target.description = %s,
-                target.genre = %s,
-                target.decade = %s,
-                target.start_seconds = %s,
-                target.end_seconds = %s,
-                target.duration = %s,
-                target.query_used = %s,
-                target.timestamp_loaded = %s,
-                target.youtube_rank = %s,
-                target.video_duration = %s,
-                target.view_count = %s,
-                target.like_count = %s,
-                target.comment_count = %s,
-                target.resolution = %s,
-                target.artist = %s,
-                target.chatgpt_prompt = %s       
-            WHEN NOT MATCHED THEN INSERT (
-                youtube_url, title, start_time, end_time, sample_type, description,
-                genre, decade, start_seconds, end_seconds, duration,
-                query_used, timestamp_loaded, youtube_rank,
-                video_duration, view_count, like_count, comment_count, resolution, artist, chatgpt_prompt
-            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-        """, [values[0]] + values[1:] + values)
+    # Perform batch MERGE from staging to enriched
+    cursor.execute("""
+    MERGE INTO SAMPLED_SONGS_ENRICHED AS target
+    USING (
+        SELECT
+            title,
+            youtube_url,
+            start_time,
+            end_time,
+            sample_type,
+            description,
+            genre,
+            decade,
+            start_seconds,
+            end_seconds,
+            duration,
+            query_used,
+            timestamp_loaded,
+            youtube_rank,
+            view_count,
+            like_count,
+            comment_count,
+            resolution,
+            artist,
+            chatgpt_prompt
+        FROM SAMPLED_SONGS_STAGING
+    ) AS source
+    ON target.youtube_url = source.youtube_url
+    WHEN MATCHED THEN UPDATE SET
+        title = source.title,
+        start_time = source.start_time,
+        end_time = source.end_time,
+        sample_type = source.sample_type,
+        description = source.description,
+        genre = source.genre,
+        decade = source.decade,
+        start_seconds = source.start_seconds,
+        end_seconds = source.end_seconds,
+        duration = source.duration,
+        query_used = source.query_used,
+        timestamp_loaded = source.timestamp_loaded,
+        youtube_rank = source.youtube_rank,
+        view_count = source.view_count,
+        like_count = source.like_count,
+        comment_count = source.comment_count,
+        resolution = source.resolution,
+        artist = source.artist,
+        chatgpt_prompt = source.chatgpt_prompt
+    WHEN NOT MATCHED THEN INSERT (
+        title,
+        youtube_url,
+        start_time,
+        end_time,
+        sample_type,
+        description,
+        genre,
+        decade,
+        start_seconds,
+        end_seconds,
+        duration,
+        query_used,
+        timestamp_loaded,
+        youtube_rank,
+        view_count,
+        like_count,
+        comment_count,
+        resolution,
+        artist,
+        chatgpt_prompt
+    ) VALUES (
+        source.title,
+        source.youtube_url,
+        source.start_time,
+        source.end_time,
+        source.sample_type,
+        source.description,
+        source.genre,
+        source.decade,
+        source.start_seconds,
+        source.end_seconds,
+        source.duration,
+        source.query_used,
+        source.timestamp_loaded,
+        source.youtube_rank,
+        source.view_count,
+        source.like_count,
+        source.comment_count,
+        source.resolution,
+        source.artist,
+        source.chatgpt_prompt
+    );
+    """)
 
     conn.commit()
-    print(f"✅ Enriched table populated with {len(df)} rows.")
+    print("✅ Enriched table populated with merged rows from staging.")
     cursor.close()
     conn.close()

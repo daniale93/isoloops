@@ -1,0 +1,51 @@
+[2025-04-17T12:12:08.386+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-17T12:12:03.383642+00:00 [queued]>
+[2025-04-17T12:12:08.391+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-17T12:12:03.383642+00:00 [queued]>
+[2025-04-17T12:12:08.391+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-17T12:12:08.399+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_discovery_flow> on 2025-04-17 12:12:03.383642+00:00
+[2025-04-17T12:12:08.407+0000] {standard_task_runner.py:60} INFO - Started process 55786 to run task
+[2025-04-17T12:12:08.409+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'rag_daily_discovery', 'run_discovery_flow', 'manual__2025-04-17T12:12:03.383642+00:00', '--job-id', '274', '--raw', '--subdir', 'DAGS_FOLDER/rag_daily_discovery.py', '--cfg-path', '/tmp/tmpxvbxrcet']
+[2025-04-17T12:12:08.411+0000] {standard_task_runner.py:88} INFO - Job 274: Subtask run_discovery_flow
+[2025-04-17T12:12:08.448+0000] {task_command.py:423} INFO - Running <TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-17T12:12:03.383642+00:00 [running]> on host d8146153ddc3
+[2025-04-17T12:12:08.486+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='rag_daily_discovery' AIRFLOW_CTX_TASK_ID='run_discovery_flow' AIRFLOW_CTX_EXECUTION_DATE='2025-04-17T12:12:03.383642+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-17T12:12:03.383642+00:00'
+[2025-04-17T12:12:10.188+0000] {logging_mixin.py:188} INFO - 🔍 Raw queries from LLM: ['Andrew Bird', 'Yo-Yo Ma', 'Béla Fleck', 'Tinariwen', 'Shakti', 'The Chieftains', 'Giant Leap', 'Nils Frahm', 'Carolina Chocolate Drops', 'Huun-Huur-Tu']
+[2025-04-17T12:12:10.189+0000] {logging_mixin.py:188} INFO - 🧠 Prompt used: Give me a list of 10 artists who use traditional instruments in a way that results in clear isolated grooves. List only the names—no extra explanation.
+[2025-04-17T12:12:10.189+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Andrew Bird
+[2025-04-17T12:12:10.786+0000] {logging_mixin.py:188} INFO - ⏩ Skipping QGAzPtwUJJU due to duration (884s)
+[2025-04-17T12:12:10.788+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Yo-Yo Ma
+[2025-04-17T12:12:11.254+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Béla Fleck
+[2025-04-17T12:12:11.684+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Tinariwen
+[2025-04-17T12:12:12.180+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Shakti
+[2025-04-17T12:12:12.737+0000] {logging_mixin.py:188} INFO - ⏩ Skipping Zl6awV54Bs4 due to duration (10163s)
+[2025-04-17T12:12:12.742+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: The Chieftains
+[2025-04-17T12:12:13.149+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Giant Leap
+[2025-04-17T12:12:13.667+0000] {logging_mixin.py:188} INFO - ⏩ Skipping UNoYKr-FOoo due to duration (614s)
+[2025-04-17T12:12:13.670+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Nils Frahm
+[2025-04-17T12:12:14.171+0000] {logging_mixin.py:188} INFO - ⏩ Skipping HPPzQgTaLbo due to duration (5211s)
+[2025-04-17T12:12:14.175+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Carolina Chocolate Drops
+[2025-04-17T12:12:14.721+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Huun-Huur-Tu
+[2025-04-17T12:12:15.198+0000] {logging_mixin.py:188} INFO - ⏩ Skipping i0djHJBAP3U due to duration (4724s)
+[2025-04-17T12:12:15.211+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-17T12:12:15.214+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-17T12:12:15.505+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS_STAGING ( title STRING, youtube_url STR...]
+[2025-04-17T12:12:15.563+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:15.563+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-17T12:12:15.564+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-17T12:12:16.277+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:16.278+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-17T12:12:16.824+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:16.826+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-17T12:12:17.516+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:17.519+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-17T12:12:18.094+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:18.095+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-17T12:12:18.692+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:18.693+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-17T12:12:18.741+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:18.742+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-17T12:12:18.742+0000] {logging_mixin.py:188} INFO - ✅ Loaded 5 rows to Snowflake.
+[2025-04-17T12:12:18.742+0000] {connection.py:718} INFO - closed
+[2025-04-17T12:12:18.770+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-17T12:12:18.826+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-17T12:12:18.858+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=rag_daily_discovery, task_id=run_discovery_flow, execution_date=20250417T121203, start_date=20250417T121208, end_date=20250417T121218
+[2025-04-17T12:12:18.897+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-17T12:12:18.914+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

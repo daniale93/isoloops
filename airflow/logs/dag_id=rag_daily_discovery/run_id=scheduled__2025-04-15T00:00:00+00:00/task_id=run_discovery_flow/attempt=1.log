@@ -1,0 +1,51 @@
+[2025-04-16T00:00:02.268+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow scheduled__2025-04-15T00:00:00+00:00 [queued]>
+[2025-04-16T00:00:02.276+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow scheduled__2025-04-15T00:00:00+00:00 [queued]>
+[2025-04-16T00:00:02.277+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-16T00:00:02.284+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_discovery_flow> on 2025-04-15 00:00:00+00:00
+[2025-04-16T00:00:02.293+0000] {standard_task_runner.py:60} INFO - Started process 26487 to run task
+[2025-04-16T00:00:02.299+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'rag_daily_discovery', 'run_discovery_flow', 'scheduled__2025-04-15T00:00:00+00:00', '--job-id', '255', '--raw', '--subdir', 'DAGS_FOLDER/rag_daily_discovery.py', '--cfg-path', '/tmp/tmpzal9s2br']
+[2025-04-16T00:00:02.301+0000] {standard_task_runner.py:88} INFO - Job 255: Subtask run_discovery_flow
+[2025-04-16T00:00:02.337+0000] {task_command.py:423} INFO - Running <TaskInstance: rag_daily_discovery.run_discovery_flow scheduled__2025-04-15T00:00:00+00:00 [running]> on host d8146153ddc3
+[2025-04-16T00:00:02.386+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='rag_daily_discovery' AIRFLOW_CTX_TASK_ID='run_discovery_flow' AIRFLOW_CTX_EXECUTION_DATE='2025-04-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-15T00:00:00+00:00'
+[2025-04-16T00:00:04.559+0000] {logging_mixin.py:188} INFO - 🔍 Raw queries from LLM: ['Taiko Masala', 'Ravi Shankar', 'Kodo', 'Trilok Gurtu', 'Lou Reed (with Indian influence)', 'The Silkroad Ensemble', 'Zhang Weiliang', 'Chen Shi-Zheng', 'Pansori Artists', 'Shankar Tucker']
+[2025-04-16T00:00:04.560+0000] {logging_mixin.py:188} INFO - 🧠 Prompt used: Give me a list of 10  Asian artists known for percussion or rhythm sections ideal for sampling. List only the names—no extra explanation.
+[2025-04-16T00:00:04.561+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Taiko Masala
+[2025-04-16T00:00:05.157+0000] {logging_mixin.py:188} INFO - ⏩ Skipping 48M46wT9SMM due to duration (2518s)
+[2025-04-16T00:00:05.159+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Ravi Shankar
+[2025-04-16T00:00:05.698+0000] {logging_mixin.py:188} INFO - ⏩ Skipping n91Vhdrrkss due to duration (1118s)
+[2025-04-16T00:00:05.700+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Kodo
+[2025-04-16T00:00:06.274+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Trilok Gurtu
+[2025-04-16T00:00:06.740+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Lou Reed (with Indian influence)
+[2025-04-16T00:00:07.267+0000] {logging_mixin.py:188} INFO - ⏩ Skipping HXkC43u860M due to duration (603s)
+[2025-04-16T00:00:07.271+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: The Silkroad Ensemble
+[2025-04-16T00:00:07.757+0000] {logging_mixin.py:188} INFO - ⏩ Skipping fZpEjrdf56k due to duration (632s)
+[2025-04-16T00:00:07.760+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Zhang Weiliang
+[2025-04-16T00:00:08.291+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Chen Shi-Zheng
+[2025-04-16T00:00:08.837+0000] {logging_mixin.py:188} INFO - ⏩ Skipping XEptDR0qPok due to duration (48s)
+[2025-04-16T00:00:08.842+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Pansori Artists
+[2025-04-16T00:00:09.313+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Shankar Tucker
+[2025-04-16T00:00:09.880+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-16T00:00:09.882+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-16T00:00:10.169+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS_STAGING ( title STRING, youtube_url STR...]
+[2025-04-16T00:00:10.308+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:00:10.309+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-16T00:00:10.312+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-16T00:00:10.916+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:00:10.918+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-16T00:00:11.575+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:00:11.575+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-16T00:00:12.180+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:00:12.181+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-16T00:00:12.880+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:00:12.882+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-16T00:00:13.638+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:00:13.639+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-16T00:00:13.713+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:00:13.713+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-16T00:00:13.714+0000] {logging_mixin.py:188} INFO - ✅ Loaded 5 rows to Snowflake.
+[2025-04-16T00:00:13.714+0000] {connection.py:718} INFO - closed
+[2025-04-16T00:00:13.749+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-16T00:00:13.800+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-16T00:00:13.828+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=rag_daily_discovery, task_id=run_discovery_flow, execution_date=20250415T000000, start_date=20250416T000002, end_date=20250416T000013
+[2025-04-16T00:00:13.869+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-16T00:00:13.888+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

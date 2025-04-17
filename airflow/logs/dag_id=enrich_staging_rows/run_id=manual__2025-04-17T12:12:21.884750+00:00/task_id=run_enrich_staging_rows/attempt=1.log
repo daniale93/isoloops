@@ -1,0 +1,79 @@
+[2025-04-17T12:12:25.021+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-17T12:12:21.884750+00:00 [queued]>
+[2025-04-17T12:12:25.026+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-17T12:12:21.884750+00:00 [queued]>
+[2025-04-17T12:12:25.026+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-17T12:12:25.032+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_enrich_staging_rows> on 2025-04-17 12:12:21.884750+00:00
+[2025-04-17T12:12:25.043+0000] {standard_task_runner.py:60} INFO - Started process 55789 to run task
+[2025-04-17T12:12:25.046+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enrich_staging_rows', 'run_enrich_staging_rows', 'manual__2025-04-17T12:12:21.884750+00:00', '--job-id', '275', '--raw', '--subdir', 'DAGS_FOLDER/enrich_staging_rows_dag.py', '--cfg-path', '/tmp/tmp1r3y48ck']
+[2025-04-17T12:12:25.047+0000] {standard_task_runner.py:88} INFO - Job 275: Subtask run_enrich_staging_rows
+[2025-04-17T12:12:25.082+0000] {task_command.py:423} INFO - Running <TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-17T12:12:21.884750+00:00 [running]> on host d8146153ddc3
+[2025-04-17T12:12:25.162+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enrich_staging_rows' AIRFLOW_CTX_TASK_ID='run_enrich_staging_rows' AIRFLOW_CTX_EXECUTION_DATE='2025-04-17T12:12:21.884750+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-17T12:12:21.884750+00:00'
+[2025-04-17T12:12:25.165+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-17T12:12:25.167+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-17T12:12:25.543+0000] {cursor.py:1028} INFO - query: [SELECT * FROM SAMPLED_SONGS_STAGING WHERE artist IS NULL OR genre IS NULL]
+[2025-04-17T12:12:25.774+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:25.775+0000] {cursor.py:1205} INFO - Number of results in first chunk: 5
+[2025-04-17T12:12:28.282+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Shankar Mahadevan",
+  "genre": "World Music",
+  "description": "The video likely contains a unique vocal performance by Shankar Mahadevan, showcasing his ability to sing continuously without pausing for breath. This can be useful for sampling isolated vocals or creating a unique remix.",
+  "decade": "1990s",
+  "sample_type": "isolated vocals"
+}
+```
+[2025-04-17T12:12:28.286+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Shankar Mahadevan', genre = 'World Mu...]
+[2025-04-17T12:12:28.734+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:32.574+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Shanghai Restoration Project",
+  "genre": "Electronic",
+  "description": "This video likely contains a modern electronic track with influences from traditional Chinese sounds. It could be useful for sampling unique instrumental sections or electronic beats that incorporate cultural elements.",
+  "decade": "2000s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-17T12:12:32.579+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Shanghai Restoration Project', genre ...]
+[2025-04-17T12:12:33.068+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:37.952+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "TAIKOPROJECT",
+  "genre": "World Music",
+  "description": "The video likely showcases a promotional performance by TAIKOPROJECT, a group known for their dynamic taiko drumming. This can be highly useful for sampling isolated percussion sounds, rhythms, and live performance energy, which can add a unique cultural and sonic element to a music producer's work.",
+  "decade": "2020s",
+  "sample_type": "isolated percussion"
+}
+```
+[2025-04-17T12:12:37.952+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'TAIKOPROJECT', genre = 'World Music',...]
+[2025-04-17T12:12:38.414+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:45.690+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "The Chieftains",
+  "genre": "Folk",
+  "description": "This video likely contains a live performance by The Chieftains, who are known for their traditional Irish folk music. This could be useful for sampling traditional instruments like the tin whistle, fiddle, or bodhrán, providing a rich, cultural texture to music productions.",
+  "decade": "2010s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-17T12:12:45.699+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'The Chieftains', genre = 'Folk', desc...]
+[2025-04-17T12:12:46.129+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:50.347+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Carolina Chocolate Drops",
+  "genre": "Folk",
+  "description": "The video likely features a live performance of 'Cornbread and Butterbeans,' showcasing traditional folk and old-time music. This could be useful for sampling acoustic instrumentation, traditional stringed instruments, and vocal harmonies, providing a rustic and authentic sound.",
+  "decade": "2010s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-17T12:12:50.348+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Carolina Chocolate Drops', genre = 'F...]
+[2025-04-17T12:12:51.030+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:52.534+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-17T12:12:52.607+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-17T12:12:52.608+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-17T12:12:52.608+0000] {connection.py:718} INFO - closed
+[2025-04-17T12:12:52.649+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-17T12:12:52.689+0000] {logging_mixin.py:188} INFO - ✅ Enriched 5 rows in Snowflake.
+[2025-04-17T12:12:52.690+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-17T12:12:52.703+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=enrich_staging_rows, task_id=run_enrich_staging_rows, execution_date=20250417T121221, start_date=20250417T121225, end_date=20250417T121252
+[2025-04-17T12:12:52.726+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-17T12:12:52.741+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

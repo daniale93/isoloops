@@ -1,0 +1,101 @@
+[2025-04-16T00:25:46.852+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-16T00:25:44.458934+00:00 [queued]>
+[2025-04-16T00:25:46.859+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-16T00:25:44.458934+00:00 [queued]>
+[2025-04-16T00:25:46.859+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-16T00:25:46.869+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_enrich_staging_rows> on 2025-04-16 00:25:44.458934+00:00
+[2025-04-16T00:25:46.875+0000] {standard_task_runner.py:60} INFO - Started process 26881 to run task
+[2025-04-16T00:25:46.878+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'enrich_staging_rows', 'run_enrich_staging_rows', 'manual__2025-04-16T00:25:44.458934+00:00', '--job-id', '258', '--raw', '--subdir', 'DAGS_FOLDER/enrich_staging_rows_dag.py', '--cfg-path', '/tmp/tmpks1dkhw4']
+[2025-04-16T00:25:46.880+0000] {standard_task_runner.py:88} INFO - Job 258: Subtask run_enrich_staging_rows
+[2025-04-16T00:25:46.941+0000] {task_command.py:423} INFO - Running <TaskInstance: enrich_staging_rows.run_enrich_staging_rows manual__2025-04-16T00:25:44.458934+00:00 [running]> on host d8146153ddc3
+[2025-04-16T00:25:46.994+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='enrich_staging_rows' AIRFLOW_CTX_TASK_ID='run_enrich_staging_rows' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T00:25:44.458934+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-16T00:25:44.458934+00:00'
+[2025-04-16T00:25:46.996+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-16T00:25:46.998+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-16T00:25:47.370+0000] {cursor.py:1028} INFO - query: [SELECT * FROM SAMPLED_SONGS_STAGING WHERE artist IS NULL OR genre IS NULL]
+[2025-04-16T00:25:47.548+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:25:47.549+0000] {cursor.py:1205} INFO - Number of results in first chunk: 7
+[2025-04-16T00:25:50.143+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Trilok Gurtu",
+  "genre": "World Music",
+  "description": "This video likely features an opening solo performance by Trilok Gurtu, known for his fusion of Indian classical music with jazz and world music. The performance could contain complex rhythms and percussion that are useful for producers looking for unique and intricate percussion samples.",
+  "decade": "2020s",
+  "sample_type": "isolated percussion"
+}
+```
+[2025-04-16T00:25:50.146+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Trilok Gurtu', genre = 'World Music',...]
+[2025-04-16T00:25:51.068+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:25:56.440+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "ZHANG Weiliang and NCPAO",
+  "genre": "World Music",
+  "description": "This video likely contains traditional Chinese chamber music, which is useful for its unique instrumental sections that can add an authentic cultural element to a music producer's work. The music may include traditional Chinese instruments such as the dizi or guzheng, providing rich textures and melodies.",
+  "decade": "2010s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-16T00:25:56.442+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'ZHANG Weiliang and NCPAO', genre = 'W...]
+[2025-04-16T00:25:56.968+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:26:01.905+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Traditional Korean Artists",
+  "genre": "World Music",
+  "description": "This video likely contains traditional Korean Pansori, which can offer unique vocal melodies and rhythms for sampling. A music producer could utilize isolated vocals or the distinctive storytelling elements to add an authentic cultural touch to a track.",
+  "decade": "Traditional",
+  "sample_type": "isolated vocals"
+}
+```
+[2025-04-16T00:26:01.909+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Traditional Korean Artists', genre = ...]
+[2025-04-16T00:26:02.555+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:26:06.379+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Shankar Tucker",
+  "genre": "World Music",
+  "description": "This video likely contains a fusion of Indian classical elements with a Western pop song, which can provide unique sampling opportunities. The blend of traditional instruments and modern vocals could offer a diverse range of sounds for a music producer looking for a fusion or crossover sample.",
+  "decade": "2010s",
+  "sample_type": "live performance"
+}
+```
+[2025-04-16T00:26:06.383+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Shankar Tucker', genre = 'World Music...]
+[2025-04-16T00:26:06.850+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:26:10.834+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Tan Dun",
+  "genre": "Classical",
+  "description": "The video likely contains an orchestral soundtrack composition that can be useful for sampling lush instrumental sections, dramatic soundscapes, or unique orchestral textures that could add depth and emotion to a music producer's work.",
+  "decade": "2000s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-16T00:26:10.837+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Tan Dun', genre = 'Classical', descri...]
+[2025-04-16T00:26:11.542+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:26:15.052+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Yasunori Mitsuda",
+  "genre": "Classical",
+  "description": "The video likely features music composed by Yasunori Mitsuda, known for his work on video game soundtracks. This could be useful for sampling due to its melodic and atmospheric qualities, often instrumental and orchestral, which can add depth and emotion to a track.",
+  "decade": "2020s",
+  "sample_type": "instrumental section"
+}
+```
+[2025-04-16T00:26:15.056+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Yasunori Mitsuda', genre = 'Classical...]
+[2025-04-16T00:26:15.598+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:26:19.517+0000] {logging_mixin.py:188} INFO - 🔍 LLM raw response: ```json
+{
+  "artist": "Abhijit Banerjee",
+  "genre": "World Music",
+  "description": "This video likely contains a lecture or talk by Abhijit Banerjee at MIT, focusing on economic concepts related to saving. Its sampling potential for a music producer might come from spoken word elements or intellectual discussions that can be creatively integrated into a track, especially for genres that value narrative and storytelling.",
+  "decade": "2010s",
+  "sample_type": "isolated vocals"
+}
+```
+[2025-04-16T00:26:19.518+0000] {cursor.py:1028} INFO - query: [UPDATE SAMPLED_SONGS_STAGING SET artist = 'Abhijit Banerjee', genre = 'World Mus...]
+[2025-04-16T00:26:20.121+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:26:21.625+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-16T00:26:21.691+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:26:21.692+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-16T00:26:21.692+0000] {connection.py:718} INFO - closed
+[2025-04-16T00:26:21.732+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-16T00:26:21.784+0000] {logging_mixin.py:188} INFO - ✅ Enriched 7 rows in Snowflake.
+[2025-04-16T00:26:21.788+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-16T00:26:21.812+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=enrich_staging_rows, task_id=run_enrich_staging_rows, execution_date=20250416T002544, start_date=20250416T002546, end_date=20250416T002621
+[2025-04-16T00:26:21.893+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-16T00:26:21.914+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -26,6 +26,7 @@ PROMPTS = [
     f"Give me a list of {MAX_QUERIES} videos or creators that showcase traditional or rare instruments (like berimbau, balafon, marimba, handpan, etc.) played solo and in high audio quality. List only the names—no extra explanation",
     f"Give me a list of {MAX_QUERIES} videos of traditional chants, call-and-response, or ritual music from indigenous or rural communities—especially with isolated vocals or percussion. List only the names—no extra explanation",
     f"Give me a list of {MAX_QUERIES}  rare or public domain recordings of political speeches, sermons, or interviews that are clean and have unique vocal tone or delivery style, suitable for sampling. List only the names—no extra explanation",
+    f"Give me a list of {MAX_QUERIES}  Asian artists known for percussion or rhythm sections ideal for sampling. List only the names—no extra explanation.",
 ]
 
 # Store selected prompt in global var

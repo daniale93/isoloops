@@ -1,0 +1,49 @@
+[2025-04-16T00:25:16.501+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-16T00:25:13.912470+00:00 [queued]>
+[2025-04-16T00:25:16.506+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-16T00:25:13.912470+00:00 [queued]>
+[2025-04-16T00:25:16.507+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-16T00:25:16.515+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_discovery_flow> on 2025-04-16 00:25:13.912470+00:00
+[2025-04-16T00:25:16.521+0000] {standard_task_runner.py:60} INFO - Started process 26870 to run task
+[2025-04-16T00:25:16.524+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'rag_daily_discovery', 'run_discovery_flow', 'manual__2025-04-16T00:25:13.912470+00:00', '--job-id', '257', '--raw', '--subdir', 'DAGS_FOLDER/rag_daily_discovery.py', '--cfg-path', '/tmp/tmpazpgv8s8']
+[2025-04-16T00:25:16.525+0000] {standard_task_runner.py:88} INFO - Job 257: Subtask run_discovery_flow
+[2025-04-16T00:25:16.558+0000] {task_command.py:423} INFO - Running <TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-16T00:25:13.912470+00:00 [running]> on host d8146153ddc3
+[2025-04-16T00:25:16.615+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='rag_daily_discovery' AIRFLOW_CTX_TASK_ID='run_discovery_flow' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T00:25:13.912470+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-16T00:25:13.912470+00:00'
+[2025-04-16T00:25:18.892+0000] {logging_mixin.py:188} INFO - 🔍 Raw queries from LLM: ['Tan Dun', 'Shivkumar Sharma', 'Zakir Hussain', 'Yasunori Mitsuda', 'Ryuichi Sakamoto', 'Kodo', 'Abhijit Banerjee', 'Tsai Chin', 'Mitsuki Takahashi', 'Ranjit Barot']
+[2025-04-16T00:25:18.894+0000] {logging_mixin.py:188} INFO - 🧠 Prompt used: Give me a list of 10  Asian artists known for percussion or rhythm sections ideal for sampling. List only the names—no extra explanation.
+[2025-04-16T00:25:18.894+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Tan Dun
+[2025-04-16T00:25:19.498+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Shivkumar Sharma
+[2025-04-16T00:25:20.144+0000] {logging_mixin.py:188} INFO - ⏩ Skipping uhyJrNxTxQ4 due to duration (2215s)
+[2025-04-16T00:25:20.146+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Zakir Hussain
+[2025-04-16T00:25:20.674+0000] {logging_mixin.py:188} INFO - ⏩ Skipping O2K0ptoYpuc due to duration (3798s)
+[2025-04-16T00:25:20.676+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Yasunori Mitsuda
+[2025-04-16T00:25:21.250+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Ryuichi Sakamoto
+[2025-04-16T00:25:21.626+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Kodo
+[2025-04-16T00:25:22.209+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Abhijit Banerjee
+[2025-04-16T00:25:22.720+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Tsai Chin
+[2025-04-16T00:25:23.255+0000] {logging_mixin.py:188} INFO - ⏩ Skipping P3F9sWeeDNE due to duration (877s)
+[2025-04-16T00:25:23.259+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Mitsuki Takahashi
+[2025-04-16T00:25:23.724+0000] {logging_mixin.py:188} INFO - ⏩ Skipping kpqWd0U5t58 due to duration (14s)
+[2025-04-16T00:25:23.728+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Ranjit Barot
+[2025-04-16T00:25:24.238+0000] {logging_mixin.py:188} INFO - ⏩ Skipping X5YcYYYO4pQ due to duration (1792s)
+[2025-04-16T00:25:24.263+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-16T00:25:24.265+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-16T00:25:24.774+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS_STAGING ( title STRING, youtube_url STR...]
+[2025-04-16T00:25:24.855+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:25:24.857+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-16T00:25:24.859+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-16T00:25:25.644+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:25:25.646+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-16T00:25:26.395+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:25:26.397+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-16T00:25:27.084+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:25:27.085+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-16T00:25:27.767+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:25:27.767+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-16T00:25:27.924+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-16T00:25:27.925+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-16T00:25:27.926+0000] {logging_mixin.py:188} INFO - ✅ Loaded 4 rows to Snowflake.
+[2025-04-16T00:25:27.926+0000] {connection.py:718} INFO - closed
+[2025-04-16T00:25:27.964+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-16T00:25:28.037+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-16T00:25:28.053+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=rag_daily_discovery, task_id=run_discovery_flow, execution_date=20250416T002513, start_date=20250416T002516, end_date=20250416T002528
+[2025-04-16T00:25:28.087+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-16T00:25:28.104+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,49 @@
+[2025-04-15T13:58:00.923+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-15T13:57:57.678335+00:00 [queued]>
+[2025-04-15T13:58:00.928+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-15T13:57:57.678335+00:00 [queued]>
+[2025-04-15T13:58:00.928+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-15T13:58:00.935+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_discovery_flow> on 2025-04-15 13:57:57.678335+00:00
+[2025-04-15T13:58:00.943+0000] {standard_task_runner.py:60} INFO - Started process 19456 to run task
+[2025-04-15T13:58:00.945+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'rag_daily_discovery', 'run_discovery_flow', 'manual__2025-04-15T13:57:57.678335+00:00', '--job-id', '246', '--raw', '--subdir', 'DAGS_FOLDER/rag_daily_discovery.py', '--cfg-path', '/tmp/tmpvz1tpba6']
+[2025-04-15T13:58:00.946+0000] {standard_task_runner.py:88} INFO - Job 246: Subtask run_discovery_flow
+[2025-04-15T13:58:00.991+0000] {task_command.py:423} INFO - Running <TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-15T13:57:57.678335+00:00 [running]> on host d8146153ddc3
+[2025-04-15T13:58:01.032+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='rag_daily_discovery' AIRFLOW_CTX_TASK_ID='run_discovery_flow' AIRFLOW_CTX_EXECUTION_DATE='2025-04-15T13:57:57.678335+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-15T13:57:57.678335+00:00'
+[2025-04-15T13:58:02.995+0000] {logging_mixin.py:188} INFO - 🔍 Raw queries from LLM: ['Nicolas Jaar', 'Jon Hopkins', 'Bicep', 'Âme', 'Bonobo', 'Lane', 'Guy Gerber', 'Osunlade', 'Mahmut Orhan', 'Moon Boots']
+[2025-04-15T13:58:02.997+0000] {logging_mixin.py:188} INFO - 🧠 Prompt used: Give me a list of 10 artists whose music features sparse arrangements and clean percussive elements, ideal for use in Afro-house or tribal edits. List only the names—no extra explanation.
+[2025-04-15T13:58:02.997+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Nicolas Jaar
+[2025-04-15T13:58:03.595+0000] {logging_mixin.py:188} INFO - ⏩ Skipping IUjWumGIqe8 due to duration (2789s)
+[2025-04-15T13:58:03.597+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Jon Hopkins
+[2025-04-15T13:58:03.979+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Bicep
+[2025-04-15T13:58:04.485+0000] {logging_mixin.py:188} INFO - ⏩ Skipping _GziHDdJY10 due to duration (46s)
+[2025-04-15T13:58:04.488+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Âme
+[2025-04-15T13:58:05.017+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Bonobo
+[2025-04-15T13:58:05.595+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Lane
+[2025-04-15T13:58:06.196+0000] {logging_mixin.py:188} INFO - ⏩ Skipping ExR2X6wY9Ls due to duration (1345s)
+[2025-04-15T13:58:06.199+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Guy Gerber
+[2025-04-15T13:58:06.719+0000] {logging_mixin.py:188} INFO - ⏩ Skipping J0tGubH9ZyM due to duration (7254s)
+[2025-04-15T13:58:06.726+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Osunlade
+[2025-04-15T13:58:07.216+0000] {logging_mixin.py:188} INFO - ⏩ Skipping 9PNTGjRckWs due to duration (12272s)
+[2025-04-15T13:58:07.226+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Mahmut Orhan
+[2025-04-15T13:58:07.774+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Moon Boots
+[2025-04-15T13:58:08.309+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-15T13:58:08.312+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-15T13:58:08.816+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS_STAGING ( title STRING, youtube_url STR...]
+[2025-04-15T13:58:08.901+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:58:08.902+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-15T13:58:08.903+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T13:58:09.490+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:58:09.492+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T13:58:10.001+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:58:10.003+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T13:58:10.400+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:58:10.401+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T13:58:10.968+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:58:10.969+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-15T13:58:11.048+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T13:58:11.049+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-15T13:58:11.050+0000] {logging_mixin.py:188} INFO - ✅ Loaded 4 rows to Snowflake.
+[2025-04-15T13:58:11.051+0000] {connection.py:718} INFO - closed
+[2025-04-15T13:58:11.081+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-15T13:58:11.131+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-15T13:58:11.159+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=rag_daily_discovery, task_id=run_discovery_flow, execution_date=20250415T135757, start_date=20250415T135800, end_date=20250415T135811
+[2025-04-15T13:58:11.247+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-15T13:58:11.264+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

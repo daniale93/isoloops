@@ -98,7 +98,7 @@ const App = () => {
         {/* Show prompt */}
         {currentPrompt && (
           <div className="mb-4 text-sm text-gray-500">
-            <span className="mr-2 font-semibold">Discovery Prompt:</span>
+            <span className="mr-2 font-semibold">Today's Discovery Prompt:</span>
             <button
               className="text-blue-600 underline hover:text-blue-800"
               onClick={() => setPromptFilter(currentPrompt)}

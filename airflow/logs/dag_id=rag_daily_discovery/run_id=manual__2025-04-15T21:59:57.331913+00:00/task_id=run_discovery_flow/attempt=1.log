@@ -1,0 +1,54 @@
+[2025-04-15T22:00:00.036+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-15T21:59:57.331913+00:00 [queued]>
+[2025-04-15T22:00:00.041+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-15T21:59:57.331913+00:00 [queued]>
+[2025-04-15T22:00:00.041+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-04-15T22:00:00.048+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_discovery_flow> on 2025-04-15 21:59:57.331913+00:00
+[2025-04-15T22:00:00.057+0000] {standard_task_runner.py:60} INFO - Started process 24656 to run task
+[2025-04-15T22:00:00.060+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'rag_daily_discovery', 'run_discovery_flow', 'manual__2025-04-15T21:59:57.331913+00:00', '--job-id', '252', '--raw', '--subdir', 'DAGS_FOLDER/rag_daily_discovery.py', '--cfg-path', '/tmp/tmpzaewbjue']
+[2025-04-15T22:00:00.062+0000] {standard_task_runner.py:88} INFO - Job 252: Subtask run_discovery_flow
+[2025-04-15T22:00:00.111+0000] {task_command.py:423} INFO - Running <TaskInstance: rag_daily_discovery.run_discovery_flow manual__2025-04-15T21:59:57.331913+00:00 [running]> on host d8146153ddc3
+[2025-04-15T22:00:00.159+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='rag_daily_discovery' AIRFLOW_CTX_TASK_ID='run_discovery_flow' AIRFLOW_CTX_EXECUTION_DATE='2025-04-15T21:59:57.331913+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-15T21:59:57.331913+00:00'
+[2025-04-15T22:00:02.190+0000] {logging_mixin.py:188} INFO - 🔍 Raw queries from LLM: ['Tofubeats', 'Emile Mosseri', 'Gumbo Funk', 'Dhol Foundation', 'KEXP', "The Musician's Toolbox", 'Timpanogos High School Percussion', 'GlobalBeat', 'Latin Percussion', 'Ethnic Instruments Studio']
+[2025-04-15T22:00:02.191+0000] {logging_mixin.py:188} INFO - 🧠 Prompt used: Give me a list of 10 YouTube creators who post isolated instrument recordings—especially percussion, bass, or ethnic instruments—ideal for sampling in Afro, Latin, funk, or world music. List only the names—no extra explanation
+[2025-04-15T22:00:02.191+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Tofubeats
+[2025-04-15T22:00:02.786+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Emile Mosseri
+[2025-04-15T22:00:03.482+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Gumbo Funk
+[2025-04-15T22:00:04.040+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Dhol Foundation
+[2025-04-15T22:00:04.881+0000] {logging_mixin.py:188} INFO - ⏩ Skipping mBPMw25vGQI due to duration (5236s)
+[2025-04-15T22:00:04.886+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: KEXP
+[2025-04-15T22:00:05.445+0000] {logging_mixin.py:188} INFO - ⏩ Skipping o5eFBlOJtBQ due to duration (2040s)
+[2025-04-15T22:00:05.448+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: The Musician's Toolbox
+[2025-04-15T22:00:06.004+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Timpanogos High School Percussion
+[2025-04-15T22:00:06.485+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: GlobalBeat
+[2025-04-15T22:00:06.962+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Latin Percussion
+[2025-04-15T22:00:07.496+0000] {logging_mixin.py:188} INFO - 🔍 Searching for: Ethnic Instruments Studio
+[2025-04-15T22:00:08.030+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.8.18, Platform: Linux-6.12.5-linuxkit-aarch64-with-glibc2.34
+[2025-04-15T22:00:08.033+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-15T22:00:08.506+0000] {cursor.py:1028} INFO - query: [CREATE TABLE IF NOT EXISTS SAMPLED_SONGS_STAGING ( title STRING, youtube_url STR...]
+[2025-04-15T22:00:08.614+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T22:00:08.615+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-15T22:00:08.617+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T22:00:09.404+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T22:00:09.408+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T22:00:10.013+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T22:00:10.016+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T22:00:10.637+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T22:00:10.639+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T22:00:11.086+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T22:00:11.087+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T22:00:11.636+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T22:00:11.637+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T22:00:12.020+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T22:00:12.024+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T22:00:12.640+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T22:00:12.648+0000] {cursor.py:1028} INFO - query: [MERGE INTO SAMPLED_SONGS_STAGING AS target USING (SELECT 'https://www.youtube.co...]
+[2025-04-15T22:00:13.180+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T22:00:13.184+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-15T22:00:13.252+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-15T22:00:13.252+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-15T22:00:13.253+0000] {logging_mixin.py:188} INFO - ✅ Loaded 8 rows to Snowflake.
+[2025-04-15T22:00:13.255+0000] {connection.py:718} INFO - closed
+[2025-04-15T22:00:13.291+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-15T22:00:13.360+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-15T22:00:13.399+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=rag_daily_discovery, task_id=run_discovery_flow, execution_date=20250415T215957, start_date=20250415T220000, end_date=20250415T220013
+[2025-04-15T22:00:13.478+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-15T22:00:13.516+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

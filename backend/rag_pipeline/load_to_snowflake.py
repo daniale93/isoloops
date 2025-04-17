@@ -46,7 +46,7 @@ def load_to_snowflake(df: pd.DataFrame, chatgpt_prompt: str = ""):
         like_count NUMBER,
         comment_count NUMBER,
         resolution STRING,
-        chatgpt_prompt STRING
+        chatgpt_prompt STRING,
         artist STRING
     )
     """)
@@ -60,9 +60,9 @@ def load_to_snowflake(df: pd.DataFrame, chatgpt_prompt: str = ""):
         title, youtube_url, start_time, end_time, sample_type,
         description, genre, decade, start_seconds, end_seconds,
         duration, query_used, timestamp_loaded, youtube_rank,
-        view_count, like_count, comment_count, resolution, chatgpt_prompt
+        view_count, like_count, comment_count, resolution, chatgpt_prompt, artist
       )
-      VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+      VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
 
     for _, row in df.iterrows():
@@ -86,7 +86,8 @@ def load_to_snowflake(df: pd.DataFrame, chatgpt_prompt: str = ""):
             row.get("like_count"),
             row.get("comment_count"),
             row.get("resolution"),
-            chatgpt_prompt
+            chatgpt_prompt,
+            row.get("artist")
         )
         cursor.execute(merge_sql, values)
 
